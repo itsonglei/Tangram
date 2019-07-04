@@ -1,0 +1,17 @@
+{
+  "lerna": "2.10.0",
+  "packages": [
+    "packages/components-h5"
+  ],
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "*.md",
+        "**/test/**"
+      ],
+      "message": "chore(release): publish %s"
+    }
+  },
+  "version": "0.0.1",
+  "npmClient": "npm"
+}
