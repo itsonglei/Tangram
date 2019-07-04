@@ -1,0 +1,9 @@
+{
+  "name": "tangram",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.15.0"
+  },
+  "description":"七巧板:一个将任意三方库优化&改造为自身适用的项目",
+  "version": "1.0.0"
+}
