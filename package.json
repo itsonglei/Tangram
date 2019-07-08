@@ -1,9 +1,16 @@
 {
   "name": "tangram",
   "private": true,
+  "description": "七巧板:一个将任意三方库优化&改造为自身适用的项目",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "jest",
+    "jest": "jest"
+  },
   "devDependencies": {
+    "jest": "^24.8.0",
     "lerna": "^3.15.0"
   },
-  "description":"七巧板:一个将任意三方库优化&改造为自身适用的项目",
   "version": "1.0.0"
 }
