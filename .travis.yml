@@ -1,8 +1,20 @@
 language: node_js
 sudo: false
-
+branches:
+  only:
+    - master  #只监测master分支
+env:
+  - PACKAGE_VERSION="1.0.*"
 node_js:
   - "10"
+
+deploy:
+  provider: npm
+  username: "${user}"
+  password: "${pw}"
+  organization: myorganization
+  space: staging
+  app_name: app_name
 
 cache:
   directories:
@@ -12,16 +24,7 @@ jobs:
   include:
     - stage: test
       script:
+        - npm config set @tangram:registry http://mavenzjk.aiyongtech.com/repository/npm-group/
         - npm install
         - npm run bootstrap
-        - npm run build
-    # - stage: deploy
-      # if: (branch = master) AND (NOT (type IN (pull_request)))
-      # script: yarn run build:docs
-      # deploy:
-      #   - provider: pages
-      #     skip-cleanup: true
-      #     github-token: $GITHUB_TOKEN
-      #     local-dir: website/build/TaroDocs
-      #     on:
-      #       branch: master
+        # - npm run build

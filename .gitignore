@@ -2,3 +2,4 @@ packages/*/package-lock.json
 packages/*/node_modules
 packages/*/__tests__
 package-lock.json
+casperjs*
