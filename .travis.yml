@@ -25,6 +25,10 @@ jobs:
     - stage: test
       script:
         - npm config set @tangram:registry http://mavenzjk.aiyongtech.com/repository/npm-group/
+        - echo "${user}";
+        - npm login --registry=http://mavenzjk.aiyongtech.com/repository/npm-group/
+        - "${user}"
+        - "${pw}"
         - npm install
         - npm run bootstrap
         # - npm run build
