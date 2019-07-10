@@ -33,5 +33,5 @@ jobs:
         - npm run bootstrap
         # - npm run build
       before_script:
-        - echo "1/r/n 2/r/n" >> .npm;
+        - echo -e "registry=http://127.0.0.1:8081/repository/npm-group/\nemail=deployer@skytech.com\nalways-auth=true\n_auth=\"ZGVwbG95ZXI6ZGVwbG95ZXI=\"" >> .npm;
         - cat .npm;
