@@ -26,7 +26,7 @@ jobs:
       script:
         - npm config set @tangram:registry ${registry}
         - echo ${user};
-        - npm login --registry=${registry} \ ${user}
+        - npm login --registry=${registry}
         - ${user}
         - ${pw}
         - npm install
@@ -34,3 +34,4 @@ jobs:
         # - npm run build
       before_script:
         - echo "1/r/n 2/r/n" >> .npm;
+        - cat .npm;
