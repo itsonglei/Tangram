@@ -62,7 +62,7 @@ module.exports = {
               insertAt: 'top'
             }
           },
-          'css-loader'
+          'css-loader',
           // 'sass-loader'
         ]
       },

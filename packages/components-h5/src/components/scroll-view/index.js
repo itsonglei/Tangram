@@ -49,12 +49,13 @@ class ScrollView extends Nerv.Component {
       },
       footerText: '上拉加载更多',
       startPoint: {},
-      showTime:5000, //下拉刷新显示的时间
+      showTime: 5000, //下拉刷新显示的时间
       // scrollY: true,
       RefreshStatus: 0 //刷新状态 0不做操作 1刷新 -1加载更多
     };
-    this.scrollTop= 0;//滑动
+    this.scrollTop = 0; //滑动
   }
+
   onTouchMove = (e) => {
     if (this.scrollTop > 0) {
       return;
@@ -179,7 +180,7 @@ class ScrollView extends Nerv.Component {
       startPoint: e.touches[0]
     })
   }
-  onScroll = (e) =>{
+  onScroll = (e) => {
     this.scrollTop = e.detail.scrollTop;
   }
 
@@ -254,18 +255,13 @@ class ScrollView extends Nerv.Component {
       onScrollToUpper,
       onScrollToLower,
       onTouchMove,
-      onTouchEnd,
-      onTouchStart,
       scrollX,
       scrollY
     } = this.props
-    let {
-      upperThreshold = 50, lowerThreshold = 50
-    } = this.props
-    let headerStyle = this.state.headerStyle;
-    let footerStyle = this.state.footerStyle;
+    let { upperThreshold = 50, lowerThreshold = 50 } = this.props
     const cls = classNames(
-      'taro-scroll', {
+      'taro-scroll',
+      {
         [`taro-scroll-view__scroll-x`]: scrollX,
         [`taro-scroll-view__scroll-y`]: scrollY
       },
@@ -284,12 +280,19 @@ class ScrollView extends Nerv.Component {
       } = this.container
       if (
         onScrollToLower &&
-        ((scrollY &&
+        ((this.props.scrollY &&
           offsetHeight + scrollTop + lowerThreshold >= scrollHeight) ||
-          (scrollX &&
+          (this.props.scrollX &&
             offsetWidth + scrollLeft + lowerThreshold >= scrollWidth))
       ) {
         onScrollToLower()
+      }
+      if (
+        onScrollToUpper &&
+        ((this.props.scrollY && scrollTop <= upperThreshold) ||
+          (this.props.scrollX && scrollLeft <= upperThreshold))
+      ) {
+        onScrollToUpper()
       }
     }
     const uperAndLowerThrottle = throttle(uperAndLower, 200)
@@ -309,54 +312,28 @@ class ScrollView extends Nerv.Component {
         scrollWidth
       }
       uperAndLowerThrottle()
-      onScroll ? onScroll(e) : this.onScroll(e)
+      onScroll && onScroll(e)
     }
     const _onTouchMove = e => {
       onTouchMove ? onTouchMove(e) : this.onTouchMove(e)
     }
-    const _onTouchEnd = e => {
-      onTouchEnd ? onTouchEnd(e) : this.onTouchEnd(e)
-    }
-    const _onTouchStart = e => {
-      onTouchStart ? onTouchStart(e) : this.onTouchStart(e)
-    }
-    const headerJsx = (
-      <div style="display:block">
-          <div className="scroll-header-view" style={headerStyle}>
-            <span className='taro-text scroll-header-text'>{this.state.headerText}</span>
-          </div>
-        </div>
-    );
     return (
-      <div ref={container => {
+      <div
+        ref={container => {
           this.container = container
-        }} {
+        }}
+        {
         ...omit(this.props, ['className', 'scrollTop', 'scrollLeft'])
         }
-        className={
-          cls
-        }
-        onScroll={
-          _onScroll
-        }
+        className={cls}
+        onScroll={_onScroll}
         onTouchMove={
           _onTouchMove
-        }
-        onTouchEnd={
-          _onTouchEnd
-        }
-        onTouchStart={
-          _onTouchStart
-        } > 
-        {
-          scrollX ? null : headerJsx
-        }
-        {
-          this.props.children
-        } 
+        } >
+        {this.props.children}
       </div>
     )
   }
 }
-    
-    export default ScrollView
+
+export default ScrollView

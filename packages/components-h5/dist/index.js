@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -252,7 +252,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(14);
+var	fixUrls = __webpack_require__(15);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -613,7 +613,7 @@ module.exports = require("@tarojs/taro-h5");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1032,80 +1032,113 @@ var MASK_HEIGHT = LINE_HEIGHT * 7;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return formatTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return calcDist; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return normalizeNumber; });
+var _this = this;
+
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
+var formatTime = function formatTime(time) {
+  _newArrowCheck(this, _this);
+
+  if (time === null) return '';
+  var sec = Math.round(time % 60);
+  var min = Math.round((time - sec) / 60);
+  return "".concat(min < 10 ? "0".concat(min) : min, ":").concat(sec < 10 ? "0".concat(sec) : sec);
+}.bind(this);
+var calcDist = function calcDist(x, y) {
+  _newArrowCheck(this, _this);
+
+  return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+}.bind(this);
+var normalizeNumber = function normalizeNumber(number) {
+  _newArrowCheck(this, _this);
+
+  return Math.max(-1, Math.min(number, 1));
+}.bind(this);
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_view__ = __webpack_require__(7);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "View", function() { return __WEBPACK_IMPORTED_MODULE_0__components_view__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_block__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_block__ = __webpack_require__(16);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Block", function() { return __WEBPACK_IMPORTED_MODULE_1__components_block__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_image__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_image__ = __webpack_require__(17);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return __WEBPACK_IMPORTED_MODULE_2__components_image__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_text__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_text__ = __webpack_require__(20);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Text", function() { return __WEBPACK_IMPORTED_MODULE_3__components_text__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_switch__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_switch__ = __webpack_require__(23);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_4__components_switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_button__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_button__ = __webpack_require__(24);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return __WEBPACK_IMPORTED_MODULE_5__components_button__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_icon__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_icon__ = __webpack_require__(27);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Icon", function() { return __WEBPACK_IMPORTED_MODULE_6__components_icon__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_radio__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_radio__ = __webpack_require__(28);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Radio", function() { return __WEBPACK_IMPORTED_MODULE_7__components_radio__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_input__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_input__ = __webpack_require__(29);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return __WEBPACK_IMPORTED_MODULE_8__components_input__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_scroll_view__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_scroll_view__ = __webpack_require__(32);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollView", function() { return __WEBPACK_IMPORTED_MODULE_9__components_scroll_view__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_swiper__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_swiper__ = __webpack_require__(35);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Swiper", function() { return __WEBPACK_IMPORTED_MODULE_10__components_swiper__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "SwiperItem", function() { return __WEBPACK_IMPORTED_MODULE_10__components_swiper__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_checkbox__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_checkbox__ = __webpack_require__(42);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Checkbox", function() { return __WEBPACK_IMPORTED_MODULE_11__components_checkbox__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_picker__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_picker__ = __webpack_require__(45);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Picker", function() { return __WEBPACK_IMPORTED_MODULE_12__components_picker__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_label__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_label__ = __webpack_require__(50);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Label", function() { return __WEBPACK_IMPORTED_MODULE_13__components_label__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_textarea__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_textarea__ = __webpack_require__(51);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Textarea", function() { return __WEBPACK_IMPORTED_MODULE_14__components_textarea__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_slider__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_slider__ = __webpack_require__(52);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Slider", function() { return __WEBPACK_IMPORTED_MODULE_15__components_slider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_audio__ = __webpack_require__(52);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Audio", function() { return __WEBPACK_IMPORTED_MODULE_16__components_audio__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_camera__ = __webpack_require__(55);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Camera", function() { return __WEBPACK_IMPORTED_MODULE_17__components_camera__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_progress__ = __webpack_require__(56);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Progress", function() { return __WEBPACK_IMPORTED_MODULE_18__components_progress__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_rich_text__ = __webpack_require__(57);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RichText", function() { return __WEBPACK_IMPORTED_MODULE_19__components_rich_text__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_form__ = __webpack_require__(58);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return __WEBPACK_IMPORTED_MODULE_20__components_form__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_radio_radio_group__ = __webpack_require__(59);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RadioGroup", function() { return __WEBPACK_IMPORTED_MODULE_21__components_radio_radio_group__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_checkbox_checkbox_group__ = __webpack_require__(60);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxGroup", function() { return __WEBPACK_IMPORTED_MODULE_22__components_checkbox_checkbox_group__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_tabbar__ = __webpack_require__(61);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Tabbar", function() { return __WEBPACK_IMPORTED_MODULE_23__components_tabbar__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_tabbar_container__ = __webpack_require__(67);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TabbarContainer", function() { return __WEBPACK_IMPORTED_MODULE_24__components_tabbar_container__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_tabbar_panel__ = __webpack_require__(68);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TabbarPanel", function() { return __WEBPACK_IMPORTED_MODULE_25__components_tabbar_panel__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_navigator__ = __webpack_require__(69);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Navigator", function() { return __WEBPACK_IMPORTED_MODULE_26__components_navigator__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_web_view__ = __webpack_require__(73);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "WebView", function() { return __WEBPACK_IMPORTED_MODULE_27__components_web_view__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_open_data__ = __webpack_require__(76);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "OpenData", function() { return __WEBPACK_IMPORTED_MODULE_28__components_open_data__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_canvas__ = __webpack_require__(77);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Canvas", function() { return __WEBPACK_IMPORTED_MODULE_29__components_canvas__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_movable_view__ = __webpack_require__(81);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MovableArea", function() { return __WEBPACK_IMPORTED_MODULE_30__components_movable_view__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MovableView", function() { return __WEBPACK_IMPORTED_MODULE_30__components_movable_view__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_cover_view__ = __webpack_require__(82);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CoverImage", function() { return __WEBPACK_IMPORTED_MODULE_31__components_cover_view__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CoverView", function() { return __WEBPACK_IMPORTED_MODULE_31__components_cover_view__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_picker_view__ = __webpack_require__(83);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PickerView", function() { return __WEBPACK_IMPORTED_MODULE_32__components_picker_view__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_picker_view_column__ = __webpack_require__(84);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PickerViewColumn", function() { return __WEBPACK_IMPORTED_MODULE_33__components_picker_view_column__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pull_down_refresh_index__ = __webpack_require__(85);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PullDownRefresh", function() { return __WEBPACK_IMPORTED_MODULE_34__components_pull_down_refresh_index__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_video__ = __webpack_require__(53);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Video", function() { return __WEBPACK_IMPORTED_MODULE_16__components_video__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_audio__ = __webpack_require__(66);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Audio", function() { return __WEBPACK_IMPORTED_MODULE_17__components_audio__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_camera__ = __webpack_require__(69);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Camera", function() { return __WEBPACK_IMPORTED_MODULE_18__components_camera__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_progress__ = __webpack_require__(70);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Progress", function() { return __WEBPACK_IMPORTED_MODULE_19__components_progress__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_rich_text__ = __webpack_require__(71);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RichText", function() { return __WEBPACK_IMPORTED_MODULE_20__components_rich_text__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_form__ = __webpack_require__(72);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return __WEBPACK_IMPORTED_MODULE_21__components_form__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_radio_radio_group__ = __webpack_require__(73);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RadioGroup", function() { return __WEBPACK_IMPORTED_MODULE_22__components_radio_radio_group__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_checkbox_checkbox_group__ = __webpack_require__(74);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxGroup", function() { return __WEBPACK_IMPORTED_MODULE_23__components_checkbox_checkbox_group__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_tabbar__ = __webpack_require__(75);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Tabbar", function() { return __WEBPACK_IMPORTED_MODULE_24__components_tabbar__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_tabbar_container__ = __webpack_require__(81);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TabbarContainer", function() { return __WEBPACK_IMPORTED_MODULE_25__components_tabbar_container__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_tabbar_panel__ = __webpack_require__(82);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TabbarPanel", function() { return __WEBPACK_IMPORTED_MODULE_26__components_tabbar_panel__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_navigator__ = __webpack_require__(83);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Navigator", function() { return __WEBPACK_IMPORTED_MODULE_27__components_navigator__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_web_view__ = __webpack_require__(87);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "WebView", function() { return __WEBPACK_IMPORTED_MODULE_28__components_web_view__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_open_data__ = __webpack_require__(90);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "OpenData", function() { return __WEBPACK_IMPORTED_MODULE_29__components_open_data__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_canvas__ = __webpack_require__(91);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Canvas", function() { return __WEBPACK_IMPORTED_MODULE_30__components_canvas__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_movable_view__ = __webpack_require__(95);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MovableArea", function() { return __WEBPACK_IMPORTED_MODULE_31__components_movable_view__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MovableView", function() { return __WEBPACK_IMPORTED_MODULE_31__components_movable_view__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_cover_view__ = __webpack_require__(96);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CoverImage", function() { return __WEBPACK_IMPORTED_MODULE_32__components_cover_view__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CoverView", function() { return __WEBPACK_IMPORTED_MODULE_32__components_cover_view__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_picker_view__ = __webpack_require__(97);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PickerView", function() { return __WEBPACK_IMPORTED_MODULE_33__components_picker_view__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_picker_view_column__ = __webpack_require__(98);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PickerViewColumn", function() { return __WEBPACK_IMPORTED_MODULE_34__components_picker_view_column__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_pull_down_refresh_index__ = __webpack_require__(99);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PullDownRefresh", function() { return __WEBPACK_IMPORTED_MODULE_35__components_pull_down_refresh_index__["a"]; });
 
 
 
@@ -1121,7 +1154,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
- // export { default as Video } from './components/video'
+
 
 
 
@@ -1144,11 +1177,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(13);
+var content = __webpack_require__(14);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1194,7 +1227,7 @@ if(false) {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -1204,7 +1237,7 @@ exports.push([module.i, "body, html{\n    -webkit-tap-highlight-color: rgba(0, 0
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /**
@@ -1293,7 +1326,7 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1347,7 +1380,7 @@ function (_Nerv$Component) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1357,7 +1390,7 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_scss__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_scss__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1367,6 +1400,8 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1375,9 +1410,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1394,12 +1429,119 @@ function (_Nerv$Component) {
   _inherits(Image, _Nerv$Component);
 
   function Image() {
+    var _this;
+
     _classCallCheck(this, Image);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Image).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Image).apply(this, arguments));
+    _this.state = {
+      isLoaded: false
+    };
+    _this._handleScroll = _this._handleScroll.bind(_assertThisInitialized(_this));
+    _this.handleScroll = _this.throttle(_this._handleScroll, 100);
+    return _this;
   }
 
   _createClass(Image, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.lazyLoad) {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleScroll);
+
+        this._handleScroll();
+      }
+    }
+  }, {
+    key: "componentWillUnMount",
+    value: function componentWillUnMount() {
+      if (this.props.lazyLoad) {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleScroll);
+      }
+    }
+  }, {
+    key: "getClientHeight",
+    value: function getClientHeight() {
+      var clientHeight = 0;
+
+      if (document.body.clientHeight && document.documentElement.clientHeight) {
+        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+      } else {
+        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+      }
+
+      return clientHeight;
+    }
+  }, {
+    key: "getScrollTop",
+    value: function getScrollTop() {
+      var scrollTop = 0;
+
+      if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+      } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+      } else {
+        scrollTop = window.scrollY || window.pageYOffset;
+      }
+
+      return scrollTop;
+    }
+  }, {
+    key: "throttle",
+    value: function throttle(fn, delay) {
+      var timer = null;
+      return function () {
+        var context = this;
+        var args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(context, args);
+        }, delay);
+      };
+    }
+  }, {
+    key: "_handleScroll",
+    value: function _handleScroll() {
+      var _this2 = this;
+
+      var _this$props$offset = this.props.offset,
+          offset = _this$props$offset === void 0 ? 0 : _this$props$offset; // 偏移量
+
+      var _this$getNodeTop = this.getNodeTop(),
+          nodeTop = _this$getNodeTop.nodeTop,
+          nodeBottom = _this$getNodeTop.nodeBottom;
+
+      var viewTop = this.getScrollTop();
+      var viewBottom = viewTop + this.getClientHeight(); // 当图片出现在视野范围内,设置真正的图片，同时移除监听
+
+      if (nodeBottom + offset >= viewTop && nodeTop - offset <= viewBottom) {
+        this.setState({
+          isLoaded: true
+        }, function () {
+          _newArrowCheck(this, _this2);
+
+          __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.findDOMNode(this).children[0].src = this.props.src;
+        }.bind(this));
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleScroll);
+      }
+    }
+  }, {
+    key: "getNodeTop",
+    value: function getNodeTop() {
+      var viewTop = this.getScrollTop();
+      var img = __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.findDOMNode(this); // 当前节点
+
+      var nodeTop = img.getBoundingClientRect().top + viewTop;
+      var nodeBottom = nodeTop + img.offsetHeight;
+      return {
+        nodeTop: nodeTop,
+        nodeBottom: nodeBottom
+      };
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -1409,18 +1551,31 @@ function (_Nerv$Component) {
           mode = _this$props.mode,
           onLoad = _this$props.onLoad,
           onError = _this$props.onError,
-          reset = _objectWithoutProperties(_this$props, ["className", "src", "style", "mode", "onLoad", "onError"]);
+          lazyLoad = _this$props.lazyLoad,
+          reset = _objectWithoutProperties(_this$props, ["className", "src", "style", "mode", "onLoad", "onError", "lazyLoad"]);
 
       var cls = __WEBPACK_IMPORTED_MODULE_2_classnames___default()('taro-img', {
         'taro-img__widthfix': mode === 'widthFix'
       }, className);
-      var imgCls = 'taro-img__mode-' + (mode || 'scaleToFill').toLowerCase().replace(/\s/g, '');
+      var imgCls = __WEBPACK_IMPORTED_MODULE_2_classnames___default()('taro-img__mode-' + (mode || 'scaleToFill').toLowerCase().replace(/\s/g, ''));
+      var currenSrc = src;
+
+      if (lazyLoad) {
+        var isLoaded = this.state.isLoaded;
+        currenSrc = isLoaded ? src : '';
+      }
+
       return __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", _extends({
         className: cls,
         style: style
-      }, reset), __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("img", {
+      }, reset), lazyLoad ? __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("img", {
         className: imgCls,
-        src: src,
+        "data-src": currenSrc,
+        onLoad: onLoad,
+        onError: onError
+      }) : __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("img", {
+        className: imgCls,
+        src: currenSrc,
         onLoad: onLoad,
         onError: onError
       }));
@@ -1433,11 +1588,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Image);
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(18);
+var content = __webpack_require__(19);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1483,17 +1638,17 @@ if(false) {
 }
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Module
-exports.push([module.i, ".taro-img {\n  display: inline-block;\n  overflow: hidden;\n  position: relative;\n  font-size: 0;\n  width: 320px;\n  height: 240px;\n  &.taro-img__widthfix {\n    height: 100%;\n  }\n  &__mode {\n    &-scaletofill {\n      width: 100%;\n      height: 100%;\n    }\n    &-aspectfit {\n      max-width: 100%;\n      max-height: 100%;\n    }\n    &-aspectfill {\n      min-width: 100%;\n      height: 100%;\n    }\n    &-widthfix {\n      width: 100%;\n    }\n    &-top {\n      width: 100%;\n    }\n    &-bottom {\n      width: 100%;\n      position: absolute;\n      bottom: 0;\n    }\n    &-left {\n      height: 100%;\n    }\n    &-right {\n      position: absolute;\n      height: 100%;\n      right: 0;\n    }\n    &-topleft {\n    }\n    &-topright {\n      position: absolute;\n      right: 0;\n    }\n    &-bottomleft {\n      position: absolute;\n      bottom: 0;\n    }\n    &-bottomright {\n      position: absolute;\n      right: 0;\n      bottom: 0;\n    }\n  }\n}\n", ""]);
+exports.push([module.i, "img[src=\"\"] {\n  opacity: 0;\n}\n.taro-img {\n  display: inline-block;\n  overflow: hidden;\n  position: relative;\n  font-size: 0;\n  width: 320px;\n  height: 240px;\n  &.taro-img__widthfix {\n    height: 100%;\n  }\n  &__mode {\n    &-scaletofill {\n      width: 100%;\n      height: 100%;\n    }\n    &-aspectfit {\n      max-width: 100%;\n      max-height: 100%;\n    }\n    &-aspectfill {\n      min-width: 100%;\n      height: 100%;\n    }\n    &-widthfix {\n      width: 100%;\n    }\n    &-top {\n      width: 100%;\n    }\n    &-bottom {\n      width: 100%;\n      position: absolute;\n      bottom: 0;\n    }\n    &-left {\n      height: 100%;\n    }\n    &-right {\n      position: absolute;\n      height: 100%;\n      right: 0;\n    }\n    &-topleft {\n    }\n    &-topright {\n      position: absolute;\n      right: 0;\n    }\n    &-bottomleft {\n      position: absolute;\n      bottom: 0;\n    }\n    &-bottomright {\n      position: absolute;\n      right: 0;\n      bottom: 0;\n    }\n  }\n}\n", ""]);
 
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1505,7 +1660,7 @@ exports.push([module.i, ".taro-img {\n  display: inline-block;\n  overflow: hidd
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1566,11 +1721,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Text);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(21);
+var content = __webpack_require__(22);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1616,7 +1771,7 @@ if(false) {
 }
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -1626,7 +1781,7 @@ exports.push([module.i, ".taro-text {\n  -moz-user-select: none;\n  -webkit-user
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1752,7 +1907,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1764,7 +1919,7 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1929,11 +2084,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Button);
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1979,7 +2134,7 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -1989,7 +2144,7 @@ exports.push([module.i, "button {\n    position: relative;\n    display: block;\
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2038,7 +2193,7 @@ var Icon = function Icon(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Icon);
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2119,7 +2274,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Radio);
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2131,7 +2286,7 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__index_scss__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__index_scss__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2377,11 +2532,11 @@ Input.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (Input);
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(30);
+var content = __webpack_require__(31);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2427,7 +2582,7 @@ if(false) {
 }
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -2437,7 +2592,7 @@ exports.push([module.i, "input {\n  display: block;\n  height: 1.4rem;\n  text-a
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2449,7 +2604,7 @@ exports.push([module.i, "input {\n  display: block;\n  height: 1.4rem;\n  text-a
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2824,8 +2979,6 @@ function (_Nerv$Component) {
           onScrollToUpper = _this$props2.onScrollToUpper,
           onScrollToLower = _this$props2.onScrollToLower,
           onTouchMove = _this$props2.onTouchMove,
-          onTouchEnd = _this$props2.onTouchEnd,
-          onTouchStart = _this$props2.onTouchStart,
           scrollX = _this$props2.scrollX,
           scrollY = _this$props2.scrollY;
       var _this$props3 = this.props,
@@ -2833,8 +2986,6 @@ function (_Nerv$Component) {
           upperThreshold = _this$props3$upperThr === void 0 ? 50 : _this$props3$upperThr,
           _this$props3$lowerThr = _this$props3.lowerThreshold,
           lowerThreshold = _this$props3$lowerThr === void 0 ? 50 : _this$props3$lowerThr;
-      var headerStyle = this.state.headerStyle;
-      var footerStyle = this.state.footerStyle;
       var cls = __WEBPACK_IMPORTED_MODULE_3_classnames___default()('taro-scroll', (_classNames = {}, _defineProperty(_classNames, "taro-scroll-view__scroll-x", scrollX), _defineProperty(_classNames, "taro-scroll-view__scroll-y", scrollY), _classNames), className);
       upperThreshold = parseInt(upperThreshold);
       lowerThreshold = parseInt(lowerThreshold);
@@ -2850,8 +3001,12 @@ function (_Nerv$Component) {
             scrollHeight = _this$container.scrollHeight,
             scrollWidth = _this$container.scrollWidth;
 
-        if (onScrollToLower && (scrollY && offsetHeight + scrollTop + lowerThreshold >= scrollHeight || scrollX && offsetWidth + scrollLeft + lowerThreshold >= scrollWidth)) {
+        if (onScrollToLower && (this.props.scrollY && offsetHeight + scrollTop + lowerThreshold >= scrollHeight || this.props.scrollX && offsetWidth + scrollLeft + lowerThreshold >= scrollWidth)) {
           onScrollToLower();
+        }
+
+        if (onScrollToUpper && (this.props.scrollY && scrollTop <= upperThreshold || this.props.scrollX && scrollLeft <= upperThreshold)) {
+          onScrollToUpper();
         }
       }.bind(this);
 
@@ -2874,7 +3029,7 @@ function (_Nerv$Component) {
           scrollWidth: scrollWidth
         };
         uperAndLowerThrottle();
-        onScroll ? onScroll(e) : this.onScroll(e);
+        onScroll && onScroll(e);
       }.bind(this);
 
       var _onTouchMove = function _onTouchMove(e) {
@@ -2883,26 +3038,6 @@ function (_Nerv$Component) {
         onTouchMove ? onTouchMove(e) : this.onTouchMove(e);
       }.bind(this);
 
-      var _onTouchEnd = function _onTouchEnd(e) {
-        _newArrowCheck(this, _this7);
-
-        onTouchEnd ? onTouchEnd(e) : this.onTouchEnd(e);
-      }.bind(this);
-
-      var _onTouchStart = function _onTouchStart(e) {
-        _newArrowCheck(this, _this7);
-
-        onTouchStart ? onTouchStart(e) : this.onTouchStart(e);
-      }.bind(this);
-
-      var headerJsx = __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
-        style: "display:block"
-      }, __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
-        className: "scroll-header-view",
-        style: headerStyle
-      }, __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("span", {
-        className: "taro-text scroll-header-text"
-      }, this.state.headerText)));
       return __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", _extends({
         ref: function (container) {
           _newArrowCheck(this, _this7);
@@ -2912,10 +3047,8 @@ function (_Nerv$Component) {
       }, __WEBPACK_IMPORTED_MODULE_2_omit_js___default()(this.props, ['className', 'scrollTop', 'scrollLeft']), {
         className: cls,
         onScroll: _onScroll,
-        onTouchMove: _onTouchMove,
-        onTouchEnd: _onTouchEnd,
-        onTouchStart: _onTouchStart
-      }), scrollX ? null : headerJsx, this.props.children);
+        onTouchMove: _onTouchMove
+      }), this.props.children);
     }
   }]);
 
@@ -2925,11 +3058,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (ScrollView);
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(33);
+var content = __webpack_require__(34);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2975,17 +3108,17 @@ if(false) {
 }
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Module
-exports.push([module.i, ".taro-scroll {\n  -webkit-overflow-scrolling: touch;\n  &::-webkit-scrollbar {\n    display: none;\n  }\n}\n.taro-scroll-view {\n  overflow: hidden;\n  &__scroll-x {\n    overflow-x: scroll;\n    overflow-y: hidden;\n  }\n  &__scroll-y {\n    overflow-x: hidden;\n    overflow-y: scroll;\n  }\n}\n.scroll-header-view {\n  width: 100%;\n  display: flex;\n  overflow: hidden;\n  justify-content: center;\n  align-items: center;\n  font-size: 16px;\n}\n.scroll-footer-view {\n  bottom: 0px;\n  width: 100%;\n  display: flex;\n  overflow: hidden;\n  justify-content: center;\n  align-items: center;\n  font-size: 16px;\n  position: absolute;\n}\n.scroll-header-text {\n  margin-left: 20px;\n  color: #999999\n}", ""]);
+exports.push([module.i, ".taro-scroll {\n  -webkit-overflow-scrolling: touch;\n  &::-webkit-scrollbar {\n    display: none;\n  }\n}\n.taro-scroll-view {\n  overflow: hidden;\n  &__scroll-x {\n    overflow-x: scroll;\n    overflow-y: hidden;\n  }\n  &__scroll-y {\n    overflow-x: hidden;\n    overflow-y: scroll;\n  }\n}\n", ""]);
 
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2997,10 +3130,10 @@ exports.push([module.i, ".taro-scroll {\n  -webkit-overflow-scrolling: touch;\n 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_swiper__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_swiper_dist_css_swiper_min_css__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_swiper__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_swiper_dist_css_swiper_min_css__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_swiper_dist_css_swiper_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_swiper_dist_css_swiper_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_index_scss__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_index_scss__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__style_index_scss__);
 var _this = this;
 
@@ -3175,7 +3308,14 @@ function (_Nerv$Component2) {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       if (this.mySwiper) {
-        var nextCurrent = nextProps.current || this._$current || 0; // 是否衔接滚动模式
+        var nextCurrent = 0;
+
+        if (nextProps.current === 0) {
+          nextCurrent = this._$current || 0;
+        } else {
+          nextCurrent = nextProps.current || this._$current || 0;
+        } // 是否衔接滚动模式
+
 
         if (nextProps.circular) {
           this.mySwiper.slideToLoop(parseInt(nextCurrent, 10)); // 更新下标
@@ -3205,6 +3345,10 @@ function (_Nerv$Component2) {
       var defaultIndicatorColor = indicatorColor || 'rgba(0, 0, 0, .3)';
       var defaultIndicatorActiveColor = indicatorActiveColor || '#000';
       var cls = __WEBPACK_IMPORTED_MODULE_2_classnames___default()("taro-swiper-".concat(this._id), 'swiper-container', className);
+      var paginationCls = __WEBPACK_IMPORTED_MODULE_2_classnames___default()('swiper-pagination', {
+        'swiper-pagination-hidden': !this.props.indicatorDots,
+        'swiper-pagination-bullets': this.props.indicatorDots
+      });
       return __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
         className: cls,
         style: style,
@@ -3219,9 +3363,9 @@ function (_Nerv$Component2) {
         }
       }), __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
         className: "swiper-wrapper"
-      }, this.props.children), this.props.indicatorDots ? __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
-        className: "swiper-pagination"
-      }) : null);
+      }, this.props.children), __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", {
+        className: paginationCls
+      }));
     }
   }]);
 
@@ -3231,11 +3375,11 @@ function (_Nerv$Component2) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom7_dist_dom7_modular__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom7_dist_dom7_modular__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ssr_window__ = __webpack_require__(9);
 var _this = this;
 
@@ -11053,7 +11197,7 @@ Swiper.use(components);
 /* harmony default export */ __webpack_exports__["a"] = (Swiper);
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12977,11 +13121,11 @@ function scroll() {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(38);
+var content = __webpack_require__(39);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -13027,7 +13171,7 @@ if(false) {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -13037,11 +13181,11 @@ exports.push([module.i, "/**\n * Swiper 4.5.0\n * Most modern mobile touch slide
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(40);
+var content = __webpack_require__(41);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -13087,7 +13231,7 @@ if(false) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -13097,7 +13241,7 @@ exports.push([module.i, ".swiper-container {\n    height: 150px;\n}\n.swiper-pag
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13109,7 +13253,7 @@ exports.push([module.i, ".swiper-container {\n    height: 150px;\n}\n.swiper-pag
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_omit_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -13184,11 +13328,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Checkbox);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(43);
+var content = __webpack_require__(44);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -13234,7 +13378,7 @@ if(false) {
 }
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -13244,7 +13388,7 @@ exports.push([module.i, ".taro-checkbox {\n  position: relative;\n  display: inl
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13253,12 +13397,12 @@ exports.push([module.i, ".taro-checkbox {\n  position: relative;\n  display: inl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_weui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_weui__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__picker_group__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__picker_group__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__constant__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__date__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__style_index_scss__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__date__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__style_index_scss__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -14013,7 +14157,7 @@ _defineProperty(Picker, "defaultProps", {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14249,7 +14393,7 @@ function (_Nerv$Component) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14296,11 +14440,11 @@ function getMaxDay(year, month) {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(48);
+var content = __webpack_require__(49);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -14346,7 +14490,7 @@ if(false) {
 }
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -14356,7 +14500,7 @@ exports.push([module.i, ".weui-picker, .weui-picker__hd{\n    font-size: 12px;\n
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14413,7 +14557,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Label);
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14537,7 +14681,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Textarea);
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14866,7 +15010,1386 @@ Slider.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (Slider);
 
 /***/ }),
-/* 52 */
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nervjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__danmu__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__controls__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_index_scss__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__style_index_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_weui__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_weui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_weui__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * Video组件的样式参考了[uni-app](https://github.com/dcloudio/uni-app/tree/master/packages/uni-h5)的实现
+ */
+
+
+
+
+
+
+
+/**
+ * @typedef {Object} Danmu
+ * @property {string} text 弹幕文字
+ * @property {string} color 弹幕颜色
+ * @property {number} [time] 弹幕时间
+ */
+
+/**
+ * Video组件参数
+ * @typedef {Object} VideoProps
+ * @property {string} src 要播放视频的资源地址
+ * @property {boolean} [autoPauseIfNavigate=true] 当跳转到其它小程序页面时，是否自动暂停本页面的视频
+ * @property {boolean} [autoPauseIfOpenNative=true] 当跳转到其它微信原生页面时，是否自动暂停本页面的视频
+ * @property {boolean} [autoplay=false] 是否自动播放
+ * @property {boolean} [controls=true] 是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
+ * @property {boolean} [danmuBtn=false] 是否显示弹幕按钮，只在初始化时有效，不能动态变更
+ * @property {Array.<Danmu>} [danmuList=[]] 弹幕列表
+ * @property {boolean} [enableDanmu=false] 是否展示弹幕，只在初始化时有效，不能动态变更
+ * @property {boolean} [enablePlayGesture=false] 是否开启播放手势，即双击切换播放/暂停
+ * @property {boolean} [enableProgressGesture=true] 是否开启控制进度的手势
+ * @property {number} [initialTime=0] 指定视频初始播放位置
+ * @property {boolean} [loop=false] 是否循环播放
+ * @property {boolean} [muted=false] 是否静音播放
+ * @property {string} [objectFit=contain] 当视频大小与 video 容器大小不一致时，视频的表现形式
+ * @property {string} [playBtnPosition=bottom] 播放按钮的位置
+ * @property {boolean} [showCenterPlayBtn=true] 是否显示视频中间的播放按钮
+ * @property {boolean} [showFullscreenBtn=true] 是否显示全屏按钮
+ * @property {boolean} [showMuteBtn=false] 是否显示静音按钮
+ * @property {boolean} [showPlayBtn=true] 是否显示视频底部控制栏的播放按钮
+ * @property {boolean} [showProgress=true] 若不设置，宽度大于240时才会显示
+ * @property {boolean} [vslideGesture=false] 在非全屏模式下，是否开启亮度与音量调节手势（同 pageGesture）
+ * @property {boolean} [vslideGestureInFullscreen=true] 在全屏模式下，是否开启亮度与音量调节手势
+ * @property {number} [direction]  设置全屏时视频的方向，不指定则根据宽高比自动判断
+ * @property {number} [duration]  指定视频时长
+ * @property {string} [poster]  视频封面的图片网络资源地址。若 controls 属性值为 false 则设置 poster 无效
+ * @property {string} [title]  视频的标题，全屏时在顶部展示
+ * @property {Function} [onPlay] 当开始/继续播放时触发play事件
+ * @property {Function} [onPause] 当暂停播放时触发 pause 事件
+ * @property {Function} [onEnded] 当播放到末尾时触发 ended 事件
+ * @property {Function} [onTimeUpdate] 播放进度变化时触发，event.detail = {currentTime, duration} 。触发频率 250ms 一次
+ * @property {Function} [onFullscreenChange] 视频进入和退出全屏时触发，event.detail = {fullScreen, direction}，direction 有效值为 vertical 或 horizontal
+ * @property {Function} [onWaiting] 视频出现缓冲时触发
+ * @property {Function} [onError] 视频播放出错时触发
+ * @property {Function} [onProgress] 加载进度变化时触发，只支持一段加载。event.detail = {buffered}，百分比
+ */
+
+var Video =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Video, _Component);
+
+  /** @type {VideoProps} */
+
+  /** @type {HTMLVideoElement} */
+
+  /** @type {Contorls} */
+
+  /** @type {HTMLDivElement} */
+
+  /** @type {HTMLDivElement} */
+
+  /** @type {number} */
+
+  /** @type {number} */
+
+  /** @type {number} */
+
+  /** @type {number} */
+  function Video(props, context) {
+    var _this2 = this;
+
+    var _this;
+
+    _classCallCheck(this, Video);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Video).call(this, props, context));
+
+    _defineProperty(_assertThisInitialized(_this), "props", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "videoRef", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "controlsRef", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "currentTimeRef", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "danmuRef", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "currentTime", 0);
+
+    _defineProperty(_assertThisInitialized(_this), "lastClickedTime", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "lastTouchScreenX", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "lastTouchScreenY", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "progressDimentions", {
+      left: 0,
+      right: 0,
+      width: 0
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onTimeUpdate", function (e) {
+      _newArrowCheck(this, _this2);
+
+      Object.defineProperty(e, 'detail', {
+        enumerable: true,
+        value: {
+          duration: e.srcElement.duration,
+          currentTime: e.srcElement.currentTime
+        }
+      });
+      _this.currentTime = _this.videoRef.currentTime;
+      var duration = _this.state.duration;
+
+      if (!_this.controlsRef.isDraggingProgressBall && !_this.isDraggingProgress) {
+        _this.controlsRef.setProgressBall(_this.currentTime / duration);
+      }
+
+      _this.controlsRef.setCurrentTime(_this.currentTime);
+
+      _this.danmuRef.tick(_this.currentTime);
+
+      _this.props.onTimeUpdate && _this.props.onTimeUpdate(e);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onEnded", function (e) {
+      _newArrowCheck(this, _this2);
+
+      _this.setState({
+        isFirst: true
+      });
+
+      _this.pause();
+
+      _this.controlsRef.toggleVisibility();
+
+      _this.props.onEnded && _this.props.onEnded(e);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onPlay", function (e) {
+      _newArrowCheck(this, _this2);
+
+      _this.props.onPlay && _this.props.onPlay(e);
+
+      _this.controlsRef.toggleVisibility(true);
+
+      if (!_this.state.isPlaying) {
+        _this.setState({
+          isPlaying: true
+        });
+      }
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onPause", function (e) {
+      _newArrowCheck(this, _this2);
+
+      _this.props.onPause && _this.props.onPause(e);
+
+      _this.controlsRef.toggleVisibility(true);
+
+      if (_this.state.isPlaying) {
+        _this.setState({
+          isPlaying: false
+        });
+      }
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onError", function (e) {
+      _newArrowCheck(this, _this2);
+
+      Object.defineProperty(e, 'detail', {
+        enumerable: true,
+        value: {
+          errMsg: e.srcElement.error.code
+        }
+      });
+      _this.props.onError && _this.props.onError(e);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onClickContainer", function (e) {
+      _newArrowCheck(this, _this2);
+
+      if (_this.props.enablePlayGesture) {
+        var now = Date.now();
+
+        if (now - _this.lastClickedTime < 300) {
+          // 双击
+          if (_this.state.isPlaying) {
+            _this.pause();
+          } else {
+            _this.play();
+          }
+        }
+
+        _this.lastClickedTime = now;
+      }
+
+      _this.controlsRef.toggleVisibility();
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onClickFullScreenBtn", function (e) {
+      _newArrowCheck(this, _this2);
+
+      e.stopPropagation();
+
+      _this.toggleFullScreen();
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onLoadedMetadata", function (e) {
+      _newArrowCheck(this, _this2);
+
+      if (_this.props.poster) return;
+
+      _this.setState({
+        duration: _this.videoRef.duration
+      });
+
+      _this.duration = _this.videoRef.duration;
+
+      if (_this.state.isFirst) {
+        _this.seek(_this.props.initialTime);
+      }
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "toggleDanmu", function (e) {
+      _newArrowCheck(this, _this2);
+
+      e.stopPropagation();
+
+      _this.controlsRef.toggleVisibility(true);
+
+      _this.setState({
+        enableDanmu: !_this.state.enableDanmu
+      });
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "toggleFullScreen", function (nextFullScreenState) {
+      var _this3 = this;
+
+      _newArrowCheck(this, _this2);
+
+      var isFullScreen = nextFullScreenState === undefined ? !_this.state.isFullScreen : nextFullScreenState;
+      var currentTime = _this.currentTime;
+      var danmuList = _this.danmuRef.danmuList;
+
+      _this.setState({
+        isFullScreen: isFullScreen
+      }, function () {
+        _newArrowCheck(this, _this3);
+
+        var evt = new Event('fullscreenChange', {
+          fullScreen: _this.state.isFullScreen,
+          direction: 'vertical'
+        });
+        _this.props.onFullscreenChange && _this.props.onFullscreenChange(evt);
+        _this.danmuRef.danmuList = danmuList;
+
+        _this.seek(currentTime);
+
+        _this.state.isPlaying && _this.play();
+
+        _this.controlsRef.toggleVisibility(true);
+      }.bind(this));
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "toggleMute", function (e) {
+      var _this4 = this;
+
+      _newArrowCheck(this, _this2);
+
+      e.stopPropagation();
+
+      _this.setState(function () {
+        _newArrowCheck(this, _this4);
+
+        var nextMuteState = !_this.state.isMute;
+        _this.videoRef.muted = nextMuteState;
+
+        _this.controlsRef.toggleVisibility(true);
+
+        return {
+          isMute: nextMuteState
+        };
+      }.bind(this));
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "play", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.videoRef.play();
+
+      _this.setState({
+        isPlaying: true,
+        isFirst: false
+      });
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "pause", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.videoRef.pause();
+
+      _this.setState({
+        isPlaying: false
+      });
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "stop", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.videoRef.pause();
+
+      _this.seek(0);
+
+      _this.setState({
+        isPlaying: false
+      });
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "seek", function (position) {
+      _newArrowCheck(this, _this2);
+
+      _this.videoRef.currentTime = position;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "showStatusBar", function () {
+      _newArrowCheck(this, _this2);
+
+      console.error('暂不支持 videoContext.showStatusBar');
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "hideStatusBar", function () {
+      _newArrowCheck(this, _this2);
+
+      console.error('暂不支持 videoContext.hideStatusBar');
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "requestFullScreen", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.toggleFullScreen(true);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "exitFullScreen", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.toggleFullScreen(false);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "playbackRate", function (rate) {
+      _newArrowCheck(this, _this2);
+
+      _this.videoRef.playbackRate = rate;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onTouchStartContainer", function (e) {
+      _newArrowCheck(this, _this2);
+
+      _this.lastTouchScreenX = e.touches[0].screenX;
+      _this.lastTouchScreenY = e.touches[0].screenY;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "bindTouchEvents", function () {
+      var _this5 = this;
+
+      _newArrowCheck(this, _this2);
+
+      var lastVolume;
+      var lastPercentage;
+      var nextPercentage;
+      var gestureType = 'none';
+
+      var analyseGesture = function analyseGesture(e) {
+        _newArrowCheck(this, _this5);
+
+        var obj = {};
+        var nowX = e.touches[0].screenX;
+        var nowY = e.touches[0].screenY;
+        var distX = nowX - _this.lastTouchScreenX;
+        var distY = nowY - _this.lastTouchScreenY;
+
+        if (gestureType === 'none') {
+          var dist = Object(__WEBPACK_IMPORTED_MODULE_4__utils__["a" /* calcDist */])(distX, distY);
+
+          if (dist < 10) {
+            obj.type = 'none';
+            return obj;
+          }
+
+          if (distX === 0 || Math.abs(distY / distX) > 1) {
+            var enableVslideGesture = _this.state.isFullScreen ? _this.props.vslideGestureInFullscreen : _this.props.vslideGesture;
+
+            if (enableVslideGesture) {
+              gestureType = 'adjustVolume';
+              lastVolume = _this.videoRef.volume;
+            }
+          } else if (_this.props.enableProgressGesture && Math.abs(distY / distX) <= 1) {
+            gestureType = 'adjustProgress';
+            lastPercentage = _this.currentTime / _this.state.duration;
+          }
+        }
+
+        obj.type = gestureType;
+        obj.dataX = Object(__WEBPACK_IMPORTED_MODULE_4__utils__["c" /* normalizeNumber */])(distX / window.screen.width);
+        obj.dataY = Object(__WEBPACK_IMPORTED_MODULE_4__utils__["c" /* normalizeNumber */])(distY / window.screen.height);
+        return obj;
+      }.bind(this);
+
+      var touchMove = function touchMove(e) {
+        _newArrowCheck(this, _this5);
+
+        if (_this.controlsRef.isDraggingProgressBall) return;
+        var gestureObj = analyseGesture(e);
+
+        if (gestureObj.type === 'adjustVolume') {
+          _this.toastVolumeRef.style.visibility = 'visible';
+          var nextVolume = Math.max(Math.min(lastVolume - gestureObj.dataY, 1), 0);
+          _this.videoRef.volume = nextVolume;
+          _this.toastVolumeBarRef.style.width = "".concat(nextVolume * 100, "%");
+        } else if (gestureObj.type === 'adjustProgress') {
+          _this.isDraggingProgress = true;
+          nextPercentage = Math.max(Math.min(lastPercentage + gestureObj.dataX, 1), 0);
+
+          _this.controlsRef.setProgressBall(nextPercentage);
+
+          _this.controlsRef.toggleVisibility(true);
+
+          _this.toastProgressTitleRef.innerHTML = "".concat(Object(__WEBPACK_IMPORTED_MODULE_4__utils__["b" /* formatTime */])(nextPercentage * _this.duration), " / ").concat(Object(__WEBPACK_IMPORTED_MODULE_4__utils__["b" /* formatTime */])(_this.duration));
+          _this.toastProgressRef.style.visibility = 'visible';
+        }
+      }.bind(this);
+
+      var touchEnd = function touchEnd(e) {
+        _newArrowCheck(this, _this5);
+
+        if (gestureType === 'adjustVolume') {
+          _this.toastVolumeRef.style.visibility = 'hidden';
+        } else if (gestureType === 'adjustProgress') {
+          _this.toastProgressRef.style.visibility = 'hidden';
+        }
+
+        gestureType = 'none';
+
+        if (_this.isDraggingProgress) {
+          _this.isDraggingProgress = false;
+
+          _this.seek(nextPercentage * _this.videoRef.duration);
+        }
+      }.bind(this);
+
+      document.body.addEventListener('touchmove', touchMove);
+      document.body.addEventListener('touchend', touchEnd);
+      document.body.addEventListener('touchcancel', touchEnd);
+      return function () {
+        _newArrowCheck(this, _this5);
+
+        document.body.removeEventListener('touchmove', touchMove);
+        document.body.removeEventListener('touchend', touchEnd);
+        document.body.removeEventListener('touchcancel', touchEnd);
+      }.bind(this);
+    }.bind(this));
+
+    var stateObj = _this.getInitialState(_this.props);
+
+    _this.state = Object.assign({
+      duration: null,
+      isPlaying: false,
+      isFirst: true,
+      enableDanmu: false,
+      isFullScreen: false,
+      isMute: false
+    }, stateObj);
+    return _this;
+  }
+
+  _createClass(Video, [{
+    key: "sendDanmu",
+    value: function sendDanmu(danmu) {
+      this.danmuRef.sendDanmu(danmu);
+    }
+  }, {
+    key: "getInitialState",
+    value: function getInitialState(props) {
+      var stateObj = {
+        enableDanmu: props.enableDanmu
+      };
+      return stateObj;
+    }
+  }, {
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this6 = this;
+
+      var getRef = function getRef(refName) {
+        var _this7 = this;
+
+        _newArrowCheck(this, _this6);
+
+        return function (ref) {
+          _newArrowCheck(this, _this7);
+
+          if (!ref) return;
+          this[refName] = ref;
+        }.bind(this);
+      }.bind(this);
+
+      this.getVideoRef = getRef('videoRef');
+      this.getControlsRef = getRef('controlsRef');
+      this.getDanmuRef = getRef('danmuRef');
+      this.getToastProgressRef = getRef('toastProgressRef');
+      this.getToastProgressTitleRef = getRef('toastProgressTitleRef');
+      this.getToastVolumeRef = getRef('toastVolumeRef');
+      this.getToastVolumeBarRef = getRef('toastVolumeBarRef');
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.unbindTouchEvents = this.bindTouchEvents();
+      this.sendDanmu(this.props.danmuList);
+    }
+  }, {
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nProps) {
+      var nState = this.getInitialState(nProps);
+      this.setState(nState);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.unbindTouchEvents();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this8 = this;
+
+      var _this$props = this.props,
+          src = _this$props.src,
+          autoplay = _this$props.autoplay,
+          className = _this$props.className,
+          id = _this$props.id,
+          initialTime = _this$props.initialTime,
+          loop = _this$props.loop,
+          muted = _this$props.muted,
+          objectFit = _this$props.objectFit,
+          poster = _this$props.poster,
+          controls = _this$props.controls,
+          showFullscreenBtn = _this$props.showFullscreenBtn,
+          showMuteBtn = _this$props.showMuteBtn,
+          showPlayBtn = _this$props.showPlayBtn,
+          showProgress = _this$props.showProgress,
+          showCenterPlayBtn = _this$props.showCenterPlayBtn,
+          danmuBtn = _this$props.danmuBtn;
+      var _this$state = this.state,
+          enableDanmu = _this$state.enableDanmu,
+          isFirst = _this$state.isFirst,
+          isMute = _this$state.isMute,
+          isFullScreen = _this$state.isFullScreen;
+      var duration = Object(__WEBPACK_IMPORTED_MODULE_4__utils__["b" /* formatTime */])(this.state.duration);
+      var videoProps = {
+        id: id,
+        src: src,
+        autoplay: autoplay,
+        poster: controls ? poster : null,
+        loop: loop,
+        muted: muted,
+        start: initialTime,
+        className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()('taro-video-video', className),
+        ref: this.getVideoRef,
+        playsinline: true,
+        'webkit-playsinline': true,
+        'object-fit': objectFit,
+        controls: false,
+        onTimeUpdate: this.onTimeUpdate,
+        onEnded: this.onEnded,
+        onPlay: this.onPlay,
+        onPause: this.onPause,
+        onError: this.onError,
+        onDurationChange: this.onLoadedMetadata
+      };
+      var videoNode = __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()('taro-video-container', {
+          'taro-video-type-fullscreen': isFullScreen,
+          'taro-video-type-mute': isMute
+        }),
+        onTouchStart: this.onTouchStartContainer,
+        onClick: this.onClickContainer
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("video", videoProps, "\u6682\u65F6\u4E0D\u652F\u6301\u64AD\u653E\u8BE5\u89C6\u9891"), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__controls__["a" /* default */], {
+        controls: controls,
+        currentTime: this.currentTime,
+        duration: this.state.duration,
+        isPlaying: this.state.isPlaying,
+        pauseFunc: this.pause,
+        playFunc: this.play,
+        seekFunc: this.seek,
+        showPlayBtn: showPlayBtn,
+        showProgress: showProgress,
+        ref: this.getControlsRef
+      }, showMuteBtn && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()('taro-video-mute', {
+          'taro-video-type-mute': isMute
+        }),
+        onClick: this.toggleMute
+      }), danmuBtn && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()('taro-video-danmu-button', {
+          'taro-video-danmu-button-active': enableDanmu
+        }),
+        onClick: this.toggleDanmu
+      }, "\u5F39\u5E55"), showFullscreenBtn && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()('taro-video-fullscreen', {
+          'taro-video-type-fullscreen': isFullScreen
+        }),
+        onClick: this.onClickFullScreenBtn
+      })), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__danmu__["a" /* default */], {
+        ref: this.getDanmuRef,
+        enable: enableDanmu
+      }), isFirst && showCenterPlayBtn && !this.state.isPlaying && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-cover"
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-cover-play-button",
+        onClick: this.play
+      }), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("p", {
+        "class": "taro-video-cover-duration"
+      }, duration)), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-toast taro-video-toast-volume",
+        ref: this.getToastVolumeRef
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-toast-title"
+      }, "\u97F3\u91CF"), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-toast-icon"
+      }), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-toast-value"
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-toast-value-content",
+        ref: this.getToastVolumeBarRef
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        "class": "taro-video-toast-volume-grids"
+      }, new Array(10).fill().map(function (v) {
+        _newArrowCheck(this, _this8);
+
+        return __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+          "class": "taro-video-toast-volume-grids-item"
+        });
+      }.bind(this)))))), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-toast taro-video-toast-progress",
+        ref: this.getToastProgressRef
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-toast-title",
+        ref: this.getToastProgressTitleRef
+      })));
+      return this.state.isFullScreen ? Object(__WEBPACK_IMPORTED_MODULE_0_nervjs__["createPortal"])(videoNode, document.body) : __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video"
+      }, videoNode);
+    }
+  }]);
+
+  return Video;
+}(__WEBPACK_IMPORTED_MODULE_0_nervjs__["Component"]);
+
+_defineProperty(Video, "defaultProps", {
+  autoPauseIfNavigate: true,
+  autoPauseIfOpenNative: true,
+  autoplay: false,
+  controls: true,
+  danmuBtn: false,
+  danmuList: [],
+  enableDanmu: false,
+  enablePlayGesture: false,
+  enableProgressGesture: true,
+  initialTime: 0,
+  loop: false,
+  muted: false,
+  objectFit: 'contain',
+  playBtnPosition: 'bottom',
+  showCenterPlayBtn: true,
+  showFullscreenBtn: true,
+  showMuteBtn: false,
+  showPlayBtn: true,
+  showProgress: true,
+  vslideGesture: false,
+  vslideGestureInFullscreen: true
+  /** @type {VideoProps} */
+
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Video);
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nervjs__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var Danmu =
+/*#__PURE__*/
+function (_PureComponent) {
+  _inherits(Danmu, _PureComponent);
+
+  function Danmu() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, Danmu);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Danmu)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      danmuList: []
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "danmuList", []);
+
+    _defineProperty(_assertThisInitialized(_this), "danmuElList", []);
+
+    _defineProperty(_assertThisInitialized(_this), "currentTime", 0);
+
+    return _this;
+  }
+
+  _createClass(Danmu, [{
+    key: "ensureProperties",
+    value: function ensureProperties(danmu) {
+      var clonedDanmu = _objectSpread({}, danmu);
+
+      if (!('time' in danmu)) {
+        clonedDanmu.time = this.currentTime;
+      }
+
+      clonedDanmu.key = Math.random();
+      clonedDanmu.bottom = "".concat(Math.random() * 90 + 5, "%");
+      return clonedDanmu;
+    }
+  }, {
+    key: "sendDanmu",
+    value: function sendDanmu(danmuList) {
+      var _this2 = this;
+
+      if (Array.isArray(danmuList)) {
+        this.danmuList = [].concat(_toConsumableArray(this.danmuList), _toConsumableArray(danmuList.map(function (danmu) {
+          _newArrowCheck(this, _this2);
+
+          return this.ensureProperties(danmu);
+        }.bind(this))));
+      } else {
+        var danmu = danmuList;
+        this.danmuList = [].concat(_toConsumableArray(this.danmuList), [_objectSpread({}, this.ensureProperties(danmu))]);
+      }
+    }
+  }, {
+    key: "tick",
+    value: function tick(currentTime) {
+      var _this3 = this;
+
+      this.currentTime = currentTime;
+      if (!this.props.enable) return;
+      var danmuList = this.danmuList;
+      /**
+       * @todo 这个判断对拖拽进度的处理不严谨
+       */
+
+      var newDanmuList = danmuList.filter(function (_ref) {
+        var time = _ref.time;
+
+        _newArrowCheck(this, _this3);
+
+        return currentTime - time < 4 && currentTime > time;
+      }.bind(this));
+      var shouldUpdate = false;
+      var oldDanmuList = this.state.danmuList;
+
+      if (newDanmuList.length !== oldDanmuList.length) {
+        shouldUpdate = true;
+      } else {
+        shouldUpdate = newDanmuList.some(function (_ref2) {
+          var _this4 = this;
+
+          var key = _ref2.key;
+
+          _newArrowCheck(this, _this3);
+
+          return oldDanmuList.every(function (danmu) {
+            _newArrowCheck(this, _this4);
+
+            return key !== danmu.key;
+          }.bind(this));
+        }.bind(this));
+      }
+
+      if (shouldUpdate) {
+        this.setState({
+          danmuList: newDanmuList
+        });
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      var _this5 = this;
+
+      requestAnimationFrame(function () {
+        var _this6 = this;
+
+        _newArrowCheck(this, _this5);
+
+        setTimeout(function () {
+          var _this7 = this;
+
+          _newArrowCheck(this, _this6);
+
+          var danmuElList = this.danmuElList.splice(0);
+          danmuElList.forEach(function (danmu) {
+            _newArrowCheck(this, _this7);
+
+            danmu.style.left = 0;
+            danmu.style.webkitTransform = 'translateX(-100%)';
+            danmu.style.transform = 'translateX(-100%)';
+          }.bind(this));
+        }.bind(this));
+      }.bind(this));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this8 = this;
+
+      if (!this.props.enable) return '';
+      return __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-danmu"
+      }, this.state.danmuList.map(function (_ref3) {
+        var _this9 = this;
+
+        var text = _ref3.text,
+            color = _ref3.color,
+            bottom = _ref3.bottom,
+            key = _ref3.key;
+
+        _newArrowCheck(this, _this8);
+
+        return __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("p", {
+          className: "taro-video-danmu-item",
+          key: key,
+          style: {
+            color: color,
+            bottom: bottom
+          },
+          ref: function (ref) {
+            _newArrowCheck(this, _this9);
+
+            if (ref) {
+              this.danmuElList.push(ref);
+            }
+          }.bind(this)
+        }, text);
+      }.bind(this)));
+    }
+  }]);
+
+  return Danmu;
+}(__WEBPACK_IMPORTED_MODULE_0_nervjs__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Danmu);
+
+/***/ }),
+/* 55 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nervjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(11);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+/**
+ * @typedef {Object} ControlsProps
+ * @property {Boolean} controls={controls}
+ * @property {Number} currentTime={this.currentTime}
+ * @property {Number} duration={this.state.duration}
+ * @property {Boolean} isPlaying={this.state.isPlaying}
+ * @property {Function} pauseFunc={this.pause}
+ * @property {Function} playFunc={this.play}
+ * @property {Function} seekFunc={this.seek}
+ * @property {Boolean} showPlayBtn={showPlayBtn}
+ * @property {Boolean} showProgress={showProgress}
+ */
+
+var Controls =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Controls, _Component);
+
+  function Controls() {
+    var _getPrototypeOf2,
+        _this2 = this;
+
+    var _this;
+
+    _classCallCheck(this, Controls);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Controls)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "visible", false);
+
+    _defineProperty(_assertThisInitialized(_this), "isDraggingProgressBall", false);
+
+    _defineProperty(_assertThisInitialized(_this), "hideControlsTimer", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "props", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "progressDimentions", {
+      left: 0,
+      right: 0,
+      width: 0
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "calcPercentage", function (pageX) {
+      _newArrowCheck(this, _this2);
+
+      var pos = pageX - _this.progressDimentions.left;
+      pos = Math.max(pos, 0);
+      pos = Math.min(pos, _this.progressDimentions.width);
+      return pos / _this.progressDimentions.width;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "getControlsRef", function (ref) {
+      _newArrowCheck(this, _this2);
+
+      if (!ref) return;
+      _this.controlsRef = ref;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "getCurrentTimeRef", function (ref) {
+      _newArrowCheck(this, _this2);
+
+      if (!ref) return;
+      _this.currentTimeRef = ref;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "getProgressBallRef", function (ref) {
+      _newArrowCheck(this, _this2);
+
+      if (!ref) return;
+      _this.progressBallRef = ref;
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onDragProgressBallStart", function () {
+      _newArrowCheck(this, _this2);
+
+      _this.isDraggingProgressBall = true;
+      _this.hideControlsTimer && clearTimeout(_this.hideControlsTimer);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "onClickProgress", function (e) {
+      _newArrowCheck(this, _this2);
+
+      e.stopPropagation();
+      var seekFunc = _this.props.seekFunc;
+
+      var percentage = _this.calcPercentage(e.pageX);
+
+      seekFunc(percentage * _this.props.duration);
+
+      _this.toggleVisibility(true);
+    }.bind(this));
+
+    _defineProperty(_assertThisInitialized(_this), "bindTouchEvents", function () {
+      var _this3 = this;
+
+      _newArrowCheck(this, _this2);
+
+      var percentage = 0;
+
+      var touchMove = function touchMove(e) {
+        _newArrowCheck(this, _this3);
+
+        if (!_this.isDraggingProgressBall) return;
+        var touchX = e.touches[0].pageX;
+        percentage = _this.calcPercentage(touchX);
+
+        _this.setProgressBall(percentage);
+      }.bind(this);
+
+      var touchEnd = function touchEnd(e) {
+        _newArrowCheck(this, _this3);
+
+        if (!_this.isDraggingProgressBall) return;
+        var seekFunc = _this.props.seekFunc;
+        _this.isDraggingProgressBall = false;
+        seekFunc(percentage * _this.props.duration);
+
+        _this.toggleVisibility(true);
+      }.bind(this);
+
+      document.body.addEventListener('touchmove', touchMove);
+      document.body.addEventListener('touchend', touchEnd);
+      document.body.addEventListener('touchcancel', touchEnd);
+      return function () {
+        _newArrowCheck(this, _this3);
+
+        document.body.removeEventListener('touchmove', touchMove);
+        document.body.removeEventListener('touchend', touchEnd);
+        document.body.removeEventListener('touchcancel', touchEnd);
+      }.bind(this);
+    }.bind(this));
+
+    return _this;
+  }
+
+  _createClass(Controls, [{
+    key: "setCurrentTime",
+    value: function setCurrentTime(time) {
+      this.currentTimeRef.innerHTML = Object(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* formatTime */])(time);
+    }
+  }, {
+    key: "setProgressBall",
+    value: function setProgressBall(percentage) {
+      this.progressBallRef.style.left = "".concat(percentage * 100, "%");
+    }
+  }, {
+    key: "toggleVisibility",
+    value: function toggleVisibility(nextVisible) {
+      var _this4 = this;
+
+      var visible = nextVisible === undefined ? !this.visible : nextVisible;
+
+      if (visible) {
+        this.hideControlsTimer && clearTimeout(this.hideControlsTimer);
+
+        if (this.props.isPlaying) {
+          this.hideControlsTimer = setTimeout(function () {
+            _newArrowCheck(this, _this4);
+
+            this.toggleVisibility(false);
+          }.bind(this), 2000);
+        }
+
+        this.controlsRef.style.visibility = 'visible';
+      } else {
+        this.controlsRef.style.visibility = 'hidden';
+      }
+
+      this.visible = !!visible;
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.unbindTouchEvents = this.bindTouchEvents();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.unbindTouchEvents();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this5 = this;
+
+      var _this$props = this.props,
+          controls = _this$props.controls,
+          currentTime = _this$props.currentTime,
+          duration = _this$props.duration,
+          isPlaying = _this$props.isPlaying,
+          pauseFunc = _this$props.pauseFunc,
+          playFunc = _this$props.playFunc,
+          showPlayBtn = _this$props.showPlayBtn,
+          showProgress = _this$props.showProgress;
+      var formattedDuration = Object(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* formatTime */])(duration);
+      var playBtn;
+
+      if (!showPlayBtn) {
+        return null;
+      } else if (isPlaying) {
+        playBtn = __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+          className: "taro-video-control-button taro-video-control-button-pause",
+          onClick: pauseFunc
+        });
+      } else {
+        playBtn = __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+          className: "taro-video-control-button taro-video-control-button-play",
+          onClick: playFunc
+        });
+      }
+
+      return __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-bar taro-video-bar-full",
+        ref: this.getControlsRef
+      }, controls && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-controls"
+      }, playBtn, showProgress && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-current-time",
+        ref: this.getCurrentTimeRef
+      }, Object(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* formatTime */])(currentTime)), showProgress && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-progress-container",
+        onClick: this.onClickProgress
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-progress",
+        ref: function (ref) {
+          _newArrowCheck(this, _this5);
+
+          if (ref !== null) {
+            var rect = ref.getBoundingClientRect();
+            this.progressDimentions.left = rect.left;
+            this.progressDimentions.right = rect.right;
+            this.progressDimentions.width = rect.width;
+          }
+        }.bind(this)
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-progress-buffered",
+        style: "width: 100%;"
+      }), __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-ball",
+        ref: this.getProgressBallRef,
+        onTouchStart: this.onDragProgressBallStart,
+        style: "left: ".concat(formattedDuration ? this.currentTime / duration * 100 : 0, "%")
+      }, __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-inner"
+      })))), showProgress && __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", {
+        className: "taro-video-duration"
+      }, formattedDuration)), this.props.children);
+    }
+  }]);
+
+  return Controls;
+}(__WEBPACK_IMPORTED_MODULE_0_nervjs__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Controls);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(57);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"insertAt":"top","hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/dist/cjs.js!./index.scss", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/dist/cjs.js!./index.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Imports
+var urlEscape = __webpack_require__(58);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(59));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(60));
+var ___CSS_LOADER_URL___2___ = urlEscape(__webpack_require__(61));
+var ___CSS_LOADER_URL___3___ = urlEscape(__webpack_require__(62));
+var ___CSS_LOADER_URL___4___ = urlEscape(__webpack_require__(63));
+var ___CSS_LOADER_URL___5___ = urlEscape(__webpack_require__(64));
+var ___CSS_LOADER_URL___6___ = urlEscape(__webpack_require__(65));
+
+// Module
+exports.push([module.i, "@charset \"UTF-8\";\n\n.taro-video {\n  width: 100%;\n  height: 225px;\n  display: inline-block;\n  line-height: 0;\n  overflow: hidden;\n  position: relative\n}\n\n.taro-video[hidden] {\n  display: none\n}\n\n.taro-video-container {\n  width: 100%;\n  height: 100%;\n  background-color: #000;\n  display: inline-block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n  object-position: inherit\n}\n\n.taro-video-container.taro-video-type-fullscreen {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%,-50%);\n  transform: translate(-50%,-50%);\n  z-index: 999\n}\n\n.taro-video-container.taro-video-type-fullscreen.taro-video-type-rotate-left {\n  -webkit-transform: translate(-50%,-50%) rotate(-90deg);\n  transform: translate(-50%,-50%) rotate(-90deg)\n}\n\n.taro-video-container.taro-video-type-fullscreen.taro-video-type-rotate-right {\n  -webkit-transform: translate(-50%,-50%) rotate(90deg);\n  transform: translate(-50%,-50%) rotate(90deg)\n}\n\n.taro-video-video {\n  width: 100%;\n  height: 100%;\n  object-position: inherit\n}\n\n.taro-video-cover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  background-color: rgba(1,1,1,.5);\n  z-index: 1\n}\n\n.taro-video-cover-play-button {\n  width: 40px;\n  height: 40px;\n  background-size: 50%;\n  background-repeat: no-repeat;\n  background-position: 50% 50%\n}\n\n.taro-video-cover-duration {\n  color: #fff;\n  font-size: 16px;\n  line-height: 1;\n  margin-top: 10px\n}\n\n.taro-video-bar {\n  visibility: hidden;\n  height: 44px;\n  background-color: rgba(0,0,0,.5);\n  overflow: hidden;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  padding: 0 10px;\n  z-index: 0\n}\n\n.taro-video-bar.taro-video-bar-full {\n  left: 0\n}\n\n.taro-video-controls {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n  flex-grow: 1;\n  margin: 0 8.5px\n}\n\n.taro-video-control-button {\n  width: 13px;\n  height: 15px;\n  padding: 14.5px 12.5px 14.5px 12.5px;\n  margin-left: -8.5px;\n  box-sizing: content-box\n}\n\n.taro-video-control-button:after {\n  content: \"\";\n  display: block;\n  width: 100%;\n  height: 100%;\n  background-size: 100%;\n  background-position: 50% 50%;\n  background-repeat: no-repeat\n}\n\n.taro-video-control-button.taro-video-control-button-play:after,.taro-video-cover-play-button {\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ")\n}\n\n.taro-video-control-button.taro-video-control-button-pause:after {\n  background-image: url(" + ___CSS_LOADER_URL___1___ + ")\n}\n\n.taro-video-current-time,.taro-video-duration {\n  height: 14.5px;\n  line-height: 14.5px;\n  margin-top: 15px;\n  margin-bottom: 14.5px;\n  font-size: 12px;\n  color: #cbcbcb\n}\n\n.taro-video-progress-container {\n  -webkit-box-flex: 2;\n  -webkit-flex-grow: 2;\n  flex-grow: 2;\n  position: relative\n}\n\n.taro-video-progress {\n  height: 2px;\n  margin: 21px 12px;\n  background-color: hsla(0,0%,100%,.4);\n  position: relative\n}\n\n.taro-video-progress-buffered {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 0;\n  height: 100%;\n  -webkit-transition: width .1s;\n  transition: width .1s;\n  background-color: hsla(0,0%,100%,.8)\n}\n\n.taro-video-ball {\n  width: 16px;\n  height: 16px;\n  padding: 14px;\n  position: absolute;\n  top: -21px;\n  box-sizing: content-box;\n  left: 0;\n  margin-left: -22px\n}\n\n.taro-video-inner {\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  border-radius: 50%\n}\n\n.taro-video-danmu-button {\n  white-space: nowrap;\n  line-height: 1;\n  padding: 2px 10px;\n  border: 1px solid #fff;\n  border-radius: 5px;\n  font-size: 13px;\n  color: #fff;\n  margin: 0 8.5px\n}\n\n.taro-video-danmu-button.taro-video-danmu-button-active {\n  border-color: #48c23d;\n  color: #48c23d\n}\n\n.taro-video-fullscreen,\n.taro-video-mute {\n  width: 17px;\n  height: 17px;\n  padding: 8.5px;\n  box-sizing: content-box;\n  background-size: 50%;\n  background-position: 50% 50%;\n  background-repeat: no-repeat\n}\n.taro-video-fullscreen {\n  background-image: url(" + ___CSS_LOADER_URL___2___ + ");\n}\n\n.taro-video-fullscreen.taro-video-type-fullscreen {\n  background-image: url(" + ___CSS_LOADER_URL___3___ + ")\n}\n\n.taro-video-mute {\n  background-image: url(" + ___CSS_LOADER_URL___4___ + ");\n}\n\n.taro-video-mute.taro-video-type-mute {\n  background-image: url(" + ___CSS_LOADER_URL___5___ + ")\n}\n\n.taro-video-danmu {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin-top: 14px;\n  margin-bottom: 44px;\n  font-size: 14px;\n  line-height: 14px;\n  overflow: visible\n}\n\n.taro-video-danmu-item {\n  line-height: 1;\n  position: absolute;\n  color: #fff;\n  white-space: nowrap;\n  left: 100%;\n  -webkit-transform: translatex(0);\n  transform: translatex(0);\n  -webkit-transition-property: left,-webkit-transform;\n  transition-property: left,-webkit-transform;\n  transition-property: left,transform;\n  transition-property: left,transform,-webkit-transform;\n  -webkit-transition-duration: 3s;\n  transition-duration: 3s;\n  -webkit-transition-timing-function: linear;\n  transition-timing-function: linear\n}\n\n.taro-video-toast {\n  pointer-events: none;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%,-50%);\n  transform: translate(-50%,-50%);\n  border-radius: 5px;\n  background-color: hsla(0,0%,100%,.8);\n  color: #000;\n  display: block;\n  visibility: hidden;\n}\n\n.taro-video-toast.taro-video-toast-volume {\n  width: 100px;\n  height: 100px;\n  display: block\n}\n\n.taro-video-toast-volume .taro-video-toast-title {\n  width: 100%;\n  font-size: 12px;\n  line-height: 16px;\n  text-align: center;\n  margin-top: 10px;\n  display: block\n}\n\n.taro-video-toast-volume .taro-video-toast-icon {\n  fill: #000;\n  width: 50%;\n  height: 50%;\n  margin-left: 25%;\n  display: block;\n  background-image: url(" + ___CSS_LOADER_URL___6___ + ");\n  background-size: 50%;\n  background-position: 50% 50%;\n  background-repeat: no-repeat\n}\n\n.taro-video-toast-volume .taro-video-toast-value {\n  width: 80px;\n  height: 5px;\n  margin-top: 5px;\n  margin-left: 10px\n}\n\n.taro-video-toast-volume .taro-video-toast-value>.taro-video-toast-value-content {\n  overflow: hidden\n}\n\n.taro-video-toast-volume-grids {\n  width: 80px;\n  height: 5px\n}\n\n.taro-video-toast-volume-grids-item {\n  float: left;\n  width: 7.1px;\n  height: 5px;\n  background-color: #000\n}\n\n.taro-video-toast-volume-grids-item:not(:first-child) {\n  margin-left: 1px\n}\n\n.taro-video-toast.taro-video-toast-progress {\n  background-color: rgba(0,0,0,.8);\n  color: #fff;\n  font-size: 14px;\n  line-height: 18px;\n  padding: 6px\n}", ""]);
+
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function escape(url, needQuotes) {
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"';
+  }
+
+  return url;
+};
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAeCAYAAAAy2w7YAAAAAXNSR0IArs4c6QAAAWhJREFUSA1j+P///0cgBoHjQGzCQCsAtgJB/AMy5wCxGNXtQ9iBwvoA5BUCMQvVLEQxHpNzDSjkRhXLMM3GKrIeKKpEkYVYjcUu+AMo3ALE3GRZiN1MvKKPgbIRJFuG10j8koeA0gZEW4jfLIKyf4EqpgOxMEELCRpFnIJ3QGU5QMyM00LizCFa1SWgSkeslhFtBGkKVwGVy6FYSJp+klR/A6quB2JOkIWMIK0oNlOf8xBoZDE9LAI7nYn6HsBq4l96WHQEaLUpAyiOaASeAM2NgvuPBpaACt82IEYtfKls0UagecpwXyAzqGTRdaA57sjmYrAptAjUsCkGYlYMg9EFyLQI1IiZB8Ti6Obh5JNh0QmgHlOcBuKSIMGi50C18UDMiMssvOJEWPQLqKYbiHnxGkRIkoBF24DyaoTMIEoeh0W3geI+RBlArCI0iz4D+RVAzEasfqLVAQ19AcSg5LoYiKWI1kiiQgCMBLnEEcfDSgAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgCAYAAAAffCjxAAAAAXNSR0IArs4c6QAAAFlJREFUSA3tksEKACAIQ7X//5zq98wOgQayum8QaGweHhMzG/6OujzKAymn+0LMqivu1XznWmX8/echTIyMyAgTwA72iIwwAexgj8gIE8CO3aMRbDPMaEy5BRGaKcZv8YxRAAAAAElFTkSuQmCC"
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAhUlEQVRYR+2WSwrAMAhEnZO3PfmULLooGEFTiIXJ2s/kRY2wzQeb85sE9CRA8jSzY1YfAFzhJBnU1AVgxH2dSiArCnD9QgGzRNnOech48SRABHoSyFb5in3PSbhyo6yvCPQkEM3u7BsPe/0FIvBfAh/vhKmVbO9SWun1qk/PSVi9TcVPBG6R1YIhgWwNpQAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABPUlEQVRYR+2Xu0pDURBF1/ZLxNcHKNiIlfhA7C0UBSEE8RNEBNFPUEQEEbGxFiSSSrCwEHsf5E/ccsSUuWfUhKQ40947+y42Z8+ZK/pcinzf9hhwD1xJ2q/qsb0JHAOzkl5y+lGAGnCWICQtZgAS6DxQk3TeLYA6cAo0JSXxjmW7CcwBdUkJurKiDhSA4kBvHbA9CqwBQx2O7BSw8ssU3ALPFRF4knT3nQLbr8B4LjLBOdAAFgJaLUkjbYC9n+zm+i4kXWbmwCqwnRMCHiXthuZAQOzPrxSA4kBxYDAcsH0EzATCfCLpJjOINoCtgFZabg7bk7AFDAeaGpKWgitZTu5N0kQbYBmYrujo9mX0CVxL+gidAdu9vY5zXhWA4sAgOND3X7NJ4AHYCaxkB8B62gslvecSFpoDOZH/PP8Cnt7hIaM5xCEAAAAASUVORK5CYII="
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/unmute.png";
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/mute.png";
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFhklEQVR4Xu2aeaxfQxTHP1VBES0NIQitWtpaaxeCUkQtaYVa0tiClAq1ExIiQTVppaWxt8RWSa2tWkJQRGgtQaSIpUKEpG0ssbbk28yV2+mZO/e9e3vvu/e98897mZnfzPl+75mZs0wvurn06ub46SGgxwLqZaA3sB/wO/A+8G/V6tS5BU4BJgJbO9DvAMOB36okoQ4CNgAeBEYbQK8Bbm4zAdsBc4EdAyA/APZoKwHHAA8DG2UA/AnYrG0ErAVcD1yXA9gfQJ8c40obsqbPgH7AY8CROTVuFQFD3X7fJid4DWsNAWOAGZ0w58YTsDZwKzChA189PbTRBGwKzAYO6iT4srbAMHfTfAksjulS1iG4JzAH2Dy2YKS/qAVcCdzi1vgZOBZ4PWvNGAG6wgYCW0IwctzNmf06BcEXtYABwOeA4otEfgEOdnGGqV6IAAUopwM6zDYuAVjeKYpYwCjgCWOhH513+b2lhE+Avrj89NPyalzyuCIE6EN9BfQ1dHoPOAD40+9LE6D/5aoqSqtLsgiQC60DTiHzfGCFoaSsQAexZdlTgEuyCDgLuK8u5G7dEAHyKN8CBrtxLwDHAX8Z+l4N3GS0L3db4aN0X5opmc+2XZQAfb2LPd2eciG1lUSRJZ9qYHkZONwiYAjwSc3gs24BXWWWfzEVuMjQez13HljX8v7A28lvEgsInaBVcxLaAvr6sgJLtBWeNTrOB+4w2p8DRvoEnAPcXTVaY70QAbrbXwIONX7zBSAL/tvrk1+iviTllnRry2irr/QSEws4D7izCxMg1XQLLAQGGXpeCkw22kOWI49RMUujCJC+uwAfGtfcImAng4AtAMsBeg04pIkESOfbgQsMsNoGnxrtSrfv7rXrSlwXWN6kLZBgEBiB8iWUUZZPIN/AF1nMoiYSICDfAlt5iB4CxhpAzwXuMtqPBuY1lYB5wFEeqFeAwwyguvIUqvuiQO/xphJwP3Cmhyh0EKrOoGDIF7n+M5pKwEwXrqdBCaQSM77Ig7SSIicDs5pKwIvACA+pzFwZIF9OlKm36QyQV7jEqDDJk5VD58uFgGIGX1Se+6yJFqAKsqI6X84GdDb4Mh0Y5zUqjFYFakUTCXja5QLSmBQHbAL8ahAgT1AeYVreSKLLphGwF/CuAfLJQLldGSTFD75c5d4mNCoWyAqG9gYWGED1AOMKo12ZbiWA/idA++deY2DVTZ0Jh5UJPsFQtD/wDaAHGWl5EzgwaUi2gK4UXS11S0cTIjrMFBtYQdAk4DID0BnAAz4B6wNLgTKKG0VIDBHwqitwpOcW+OOB540FdeipNKbUWFrUtn06o5xOij4KyDuqU0IE3Obl/rLA63pTzm9XA8jKACjdniZAaSKFmUpB1yUhAlTsUEpMh913wEkuTe7rKTzPAHqO44vpKPkFhH3cWWBVV6ogJVYZUgz/tXtIYelzI3Ct0fExIGx6j7iKWBUUveyYBehv1RIjIEsfqziq8Xp4pSBJOYTVJFQcVY3wCFeKUjVGyYfQWB00+5bEVBECrNS+qsOKBpVHNCVWHs+LS7H5PV5pOu9v0+OKEOAXR39w1e1C7wM6AkJ1eLmkRcrpRQiQrqobXO5S3vL3/4kBKMsCknV0k+iasVLUMV3UX5SAPGtED8EOT+L9YENnCasUIXNO2goChFWHqAIRyxXN4qI1BCQg9dJESYq8LnbrCBAR8t50Lig6i0krCRBoVWhVlt45wkBrCRBuRZyPuAguxIPe9lXqhpd9DcZMXOvdkPF0Xu/8dohNUmZ/1QQkuitXr+d4fryuFx3jywQYm6suAqSX8vLTXKJDt4QqO6rtLYspXWZ/nQQkOJTAUJZGIav19q9MvKvN1RUIWKMAY5P3EBBjqO393d4C/gMVHwRQlpx21QAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14874,7 +16397,7 @@ Slider.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_weui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_weui__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -15006,11 +16529,11 @@ Audio.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (Audio);
 
 /***/ }),
-/* 53 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(54);
+var content = __webpack_require__(68);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -15056,7 +16579,7 @@ if(false) {
 }
 
 /***/ }),
-/* 54 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -15066,17 +16589,13 @@ exports.push([module.i, "@charset \"UTF-8\";\n\naudio {\n  max-width:100%;\n}\n"
 
 
 /***/ }),
-/* 55 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_weui__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_weui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_weui__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nervjs__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15096,7 +16615,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var Camera =
 /*#__PURE__*/
 function (_Nerv$Component) {
@@ -15111,113 +16629,22 @@ function (_Nerv$Component) {
   _createClass(Camera, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this = this;
-
-      this.initCamera();
-      var context = this.show.getContext('2d'); // 绑定事件
-
-      this.getCamera.addEventListener('click', function () {
-        _newArrowCheck(this, _this);
-
-        context.drawImage(this.vide, 0, 0, 480, 320);
-      }.bind(this));
-    }
-  }, {
-    key: "initCamera",
-    value: function initCamera() {
-      var _this2 = this;
-
-      // 区分前后摄像头
-      var devicePosition = this.props.devicePosition;
-      var device;
-
-      if (devicePosition === 'front') {
-        device = 'user';
-      } else {
-        device = 'environment';
-      }
-
-      if (navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia) {
-        // 调用用户媒体设备，访问摄像头
-        this.getUserMedia({
-          audio: true,
-          video: {
-            facingMode: device
-          }
-        }, function (stream) {
-          _newArrowCheck(this, _this2);
-
-          // 兼容webkit内核浏览器
-          var CompatibleURL = window.URL || window.webkitURL;
-          this.vide.src = CompatibleURL.createObjectURL(stream); // 播放视频
-
-          this.vide.play();
-        }.bind(this), function (error) {
-          _newArrowCheck(this, _this2);
-
-          if (error.name === 'NotAllowedError') {
-            this.props.binderror(error);
-          } else {
-            this.props.bindstop(error);
-          }
-        }.bind(this));
-      } else {
-        alert('你的浏览器不支持访问用户媒体设备');
-      }
-    } // 访问用户媒体设备的兼容方法
-
-  }, {
-    key: "getUserMedia",
-    value: function getUserMedia(constrains, success, error) {
-      if (navigator.mediaDevices.getUserMedia) {
-        // 最新标准API
-        navigator.mediaDevices.getUserMedia(constrains).then(success)["catch"](error);
-      } else if (navigator.webkitGetUserMedia) {
-        // webkit内核浏览器
-        navigator.webkitGetUserMedia(constrains).then(success)["catch"](error);
-      } else if (navigator.getUserMedia) {
-        // 旧版API
-        navigator.getUserMedia(constrains).then(success)["catch"](error);
-      }
+      console.error('h5 暂不支持 Camera 组件');
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
-
-      return __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("div", null, __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("video", {
-        id: "video",
-        autoplay: true,
-        style: "width: 480px;height: 320px",
-        ref: function (vide) {
-          _newArrowCheck(this, _this3);
-
-          this.vide = vide;
-        }.bind(this)
-      }), __WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.createElement("canvas", {
-        id: "canvas",
-        width: "480",
-        height: "320",
-        ref: function (show) {
-          _newArrowCheck(this, _this3);
-
-          this.show = show;
-        }.bind(this)
-      }));
+      return __WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.createElement("div", null);
     }
   }]);
 
   return Camera;
-}(__WEBPACK_IMPORTED_MODULE_1_nervjs___default.a.Component); // 默认配置
+}(__WEBPACK_IMPORTED_MODULE_0_nervjs___default.a.Component);
 
-
-Camera.defaultProps = {
-  devicePosition: 'back'
-};
 /* harmony default export */ __webpack_exports__["a"] = (Camera);
 
 /***/ }),
-/* 56 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15250,7 +16677,8 @@ function parseType(props) {
       strokeWidth = props.strokeWidth,
       activeColor = props.activeColor,
       backgroundColor = props.backgroundColor,
-      active = props.active; // 抛出错误信息
+      active = props.active,
+      borderRadius = props.borderRadius; // 抛出错误信息
 
   var throwErrorMsg = function throwErrorMsg(type) {
     _newArrowCheck(this, _this);
@@ -15267,6 +16695,8 @@ function parseType(props) {
   if (backgroundColor) {
     Object(__WEBPACK_IMPORTED_MODULE_3__utils_parse_type__["d" /* isString */])(backgroundColor) ? '' : throwErrorMsg('backgroundColor');
   }
+
+  if (borderRadius) Object(__WEBPACK_IMPORTED_MODULE_3__utils_parse_type__["d" /* isString */])(borderRadius) ? '' : throwErrorMsg('borderRadius');
 }
 
 var Progress = function Progress(props) {
@@ -15279,14 +16709,16 @@ var Progress = function Progress(props) {
       activeColor = props.activeColor,
       backgroundColor = props.backgroundColor,
       active = props.active,
-      percent = props.percent;
+      percent = props.percent,
+      borderRadius = props.borderRadius;
   var pgPercent = percent > 100 ? 100 : percent < 0 ? 0 : percent;
   var cls = __WEBPACK_IMPORTED_MODULE_2_classnames___default()('weui-progress', className);
   var pgWdith = {
     width: pgPercent + '%',
     backgroundColor: activeColor,
     WebkitTransition: active ? "width 1s ease-in-out" : 'none',
-    transition: active ? "width 1s ease-in-out" : 'none'
+    transition: active ? "width 1s ease-in-out" : 'none',
+    borderRadius: borderRadius ? "".concat(borderRadius, "px") : 0
   };
   var pgHeight = {
     height: strokeWidth + 'px',
@@ -15313,7 +16745,7 @@ Progress.defaultProps = {
 };
 
 /***/ }),
-/* 57 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15442,7 +16874,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (RichText);
 
 /***/ }),
-/* 58 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15593,7 +17025,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Form);
 
 /***/ }),
-/* 59 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15744,7 +17176,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (RadioGroup);
 
 /***/ }),
-/* 60 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15880,7 +17312,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (CheckboxGroup);
 
 /***/ }),
-/* 61 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15892,10 +17324,10 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_nervjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_resolve_pathname__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabbarItem__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__style_index_scss__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_resolve_pathname__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabbarItem__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__style_index_scss__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__style_index_scss__);
 var _this = this;
 
@@ -16362,7 +17794,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Tabbar);
 
 /***/ }),
-/* 62 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16435,7 +17867,7 @@ function resolvePathname(to, from) {
 /* harmony default export */ __webpack_exports__["a"] = (resolvePathname);
 
 /***/ }),
-/* 63 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16572,7 +18004,7 @@ _defineProperty(Tabbar, "defaultProps", {
 
 
 /***/ }),
-/* 64 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16702,11 +18134,11 @@ var isNumber = function isNumber(obj) {
 }.bind(this);
 
 /***/ }),
-/* 65 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(66);
+var content = __webpack_require__(80);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -16752,7 +18184,7 @@ if(false) {
 }
 
 /***/ }),
-/* 66 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -16762,7 +18194,7 @@ exports.push([module.i, "html, body {\n  height: 100%;\n}\n#app {\n  height: 100
 
 
 /***/ }),
-/* 67 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16835,7 +18267,7 @@ function (_Nerv$Component) {
 
 
 /***/ }),
-/* 68 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16908,7 +18340,7 @@ function (_Nerv$Component) {
 
 
 /***/ }),
-/* 69 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16918,8 +18350,8 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nervjs__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_nervjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_hoverable__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigator_css__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_hoverable__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigator_css__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigator_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__navigator_css__);
 var _dec, _class, _class2, _temp;
 
@@ -17107,7 +18539,7 @@ function (_Taro$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Navigator);
 
 /***/ }),
-/* 70 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17121,7 +18553,7 @@ var _this = this;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -17336,11 +18768,11 @@ var hoverable = function hoverable(_ref) {
 /* harmony default export */ __webpack_exports__["a"] = (hoverable);
 
 /***/ }),
-/* 71 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(72);
+var content = __webpack_require__(86);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -17386,7 +18818,7 @@ if(false) {
 }
 
 /***/ }),
-/* 72 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -17396,7 +18828,7 @@ exports.push([module.i, ".navigator-hover {\r\n  background: #efefef;\r\n}\r\n",
 
 
 /***/ }),
-/* 73 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17404,7 +18836,7 @@ exports.push([module.i, ".navigator-hover {\r\n  background: #efefef;\r\n}\r\n",
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_nervjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_omit_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_omit_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_omit_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_index_scss__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -17485,11 +18917,11 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (WebView);
 
 /***/ }),
-/* 74 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(75);
+var content = __webpack_require__(89);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -17535,7 +18967,7 @@ if(false) {
 }
 
 /***/ }),
-/* 75 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -17545,7 +18977,7 @@ exports.push([module.i, "iframe {\n    border: none;\n}\n.taro-webview {\n    po
 
 
 /***/ }),
-/* 76 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17604,7 +19036,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (OpenData);
 
 /***/ }),
-/* 77 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17612,16 +19044,16 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tarojs_taro_h5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__tarojs_taro_h5__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_touchable__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_touchable__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_css__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_css__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_index_css__);
 var _dec, _class, _class2, _temp;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -17788,7 +19220,7 @@ function (_Taro$PureComponent) {
 /* harmony default export */ __webpack_exports__["a"] = (Canvas);
 
 /***/ }),
-/* 78 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17802,7 +19234,7 @@ var _this = this;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -18008,11 +19440,11 @@ var touchable = function touchable() {
 /* harmony default export */ __webpack_exports__["a"] = (touchable);
 
 /***/ }),
-/* 79 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(80);
+var content = __webpack_require__(94);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -18058,7 +19490,7 @@ if(false) {
 }
 
 /***/ }),
-/* 80 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -18068,7 +19500,7 @@ exports.push([module.i, ".taro-canvas {\r\n  position: relative;\r\n  width: 300
 
 
 /***/ }),
-/* 81 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18157,7 +19589,7 @@ function (_Nerv$Component2) {
 
 
 /***/ }),
-/* 82 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18246,7 +19678,7 @@ function (_Nerv$Component2) {
 
 
 /***/ }),
-/* 83 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18305,7 +19737,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PickerView);
 
 /***/ }),
-/* 84 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18364,7 +19796,7 @@ function (_Nerv$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (PickerViewColumn);
 
 /***/ }),
-/* 85 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18374,7 +19806,7 @@ function (_Nerv$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_nervjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_nervjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tarojs_taro_h5__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tarojs_taro_h5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__tarojs_taro_h5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_css__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_css__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_index_css__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -18390,7 +19822,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { if (i % 2) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } else { Object.defineProperties(target, Object.getOwnPropertyDescriptors(arguments[i])); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
 
@@ -18970,11 +20402,11 @@ function (_Nerv$Component3) {
 /* harmony default export */ __webpack_exports__["a"] = (PullDownRefresh);
 
 /***/ }),
-/* 86 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(87);
+var content = __webpack_require__(101);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -19020,7 +20452,7 @@ if(false) {
 }
 
 /***/ }),
-/* 87 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);

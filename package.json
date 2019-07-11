@@ -13,7 +13,7 @@
     "lerna": "^3.15.0"
   },
   "publishConfig": {
-    "access": "restricted"
+    "registry": "http://mavenzjk.aiyongtech.com/repository/npm-hosted/"
   },
   "version": "1.0.0"
 }

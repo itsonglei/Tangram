@@ -8,14 +8,6 @@ env:
 node_js:
   - "10"
 
-deploy:
-  provider: npm
-  username: ${user}
-  password: ${pw}
-  organization: myorganization
-  space: staging
-  app_name: app_name
-
 cache:
   directories:
   - node_modules
@@ -24,11 +16,6 @@ jobs:
   include:
     - stage: test
       script:
-        # - npm config set @tangram:registry ${registry}
-        - echo -e ${user};
-        # - npm login --registry=${registry}
-        # - ${user}
-        # - ${pw}
         - npm install
         - npm run bootstrap
         # - npm run build
