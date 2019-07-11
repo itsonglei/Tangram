@@ -1,6 +1,6 @@
 {
-  "name": "@tarojs/components",
-  "version": "1.3.8",
+  "name": "@tangram/components-h5",
+  "version": "0.0.2",
   "description": "",
   "main:h5": "src/index.js",
   "main": "dist/index.js",
