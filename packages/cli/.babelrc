@@ -1,0 +1,17 @@
+/**
+ * @desc babel的设置都放置在这里
+ * @doscUrl https: //babeljs.io/docs/en/babel-core/
+ */
+{
+  "presets": [
+    // 要加载和使用的preset列表，preset名前的babel-preset-可省略；presets列表的preset按从尾到头的逆序运行（为了兼容用户使用习惯）
+    "env",
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    // 要加载和使用的插件列表，插件名前的babel-plugin-可省略；plugin列表按从头到尾的顺序运行
+    "babel-plugin-transform-class-properties"
+  ]
+}
+// 同时设置了presets和plugins，那么plugins的先运行；每个preset和plugin都可以再配置自己的option

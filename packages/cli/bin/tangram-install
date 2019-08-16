@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const program = require('commander')
+const appPath = process.cwd();
+const install = require('../dist/install').default
+
+program
+  	.option('--type [typeName]', 'Install type, rap/aop/dav/taro/qap/fie')
+	.option('--pkgVersion [typeName]', 'Install version, rap/aop/dav/taro/qap/fie')
+//   .option('--watch', 'Watch mode')
+//   .option('--env [env]', 'Env type')
+//   .option('--ui', 'Build Taro UI library')
+//   .option('--plugin [typeName]', 'Build Taro plugin project, weapp')
+//   .option('--port [port]', 'Specified port')
+//   .option('--release', 'Release quickapp')
+//   .option('--buildVersion [buildVersionName]', 'Build version, 1.0.0/2.0.0-bate.1')
+  .parse(process.argv);
+
+
+
+// console.log("program", program);
+const {
+	type,
+	pkgVersion
+} = program;
+console.log();
+console.log("type", type);
+console.log("process.platform", process.platform);
+console.log("appPath", appPath);
+
+install(appPath, {
+	type,
+	pkgVersion
+}
+);
+
+// const https = require('https'); 

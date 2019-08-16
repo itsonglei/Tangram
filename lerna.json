@@ -1,7 +1,9 @@
 {
   "lerna": "2.10.0",
   "packages": [
-    "packages/components-h5"
+    "packages/components-h5",
+    "packages/cli",
+    "packages/tangram"
   ],
   "command": {
     "publish": {

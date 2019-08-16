@@ -1,6 +1,6 @@
 {
   "name": "@tangram/components-h5",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "",
   "main:h5": "src/index.js",
   "main": "dist/index.js",
