@@ -4,6 +4,7 @@
   "description": "七巧板:一个将任意三方库优化&改造为自身适用的项目",
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "build": "lerna run build"
   },
   "devDependencies": {

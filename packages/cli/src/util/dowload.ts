@@ -7,6 +7,7 @@ import * as fs from 'fs-extra'
  */
 import * as path from 'path'
 import * as request from 'request'
+import CONFIG from './../config';
 
 const GITHUB_API = 'https://api.github.com/'
 const GITHUB = 'https://github.com/'
@@ -57,7 +58,7 @@ export async function downloadGithubRepoLatestRelease (repoName: string, appPath
     }
     // https://github.com/rap-space/rap-cli/archive/1.2.4.tar.gz
     // https://github.com/rap-space/rap-cli/releases/download/1.2.4/rap.pkg
-    const downloadTemp = `download_temp.${type}`
+    const downloadTemp = CONFIG.DOWNLOAD_NAME+`.${type}`
     request({
       url: downloadUrl,
       headers: {
