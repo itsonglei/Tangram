@@ -4,6 +4,17 @@
 ### Features
 
 * 新增 rap 手脚架安装 ([11e23a1](https://github.com/itsonglei/npm_common/commit/11e23a1))
+* 新增 rap-cli pkg 包编译安装 ([08064d0](https://github.com/itsonglei/npm_common/commit/08064d0))
+* 新增 travis 编译 git 项目 ([a3e1d12](https://github.com/itsonglei/npm_common/commit/a3e1d12))
+
+
+
+# [1.0.0](https://github.com/itsonglei/npm_common/compare/v0.0.1...v1.0.0) (2019-08-18)
+
+
+### Features
+
+* 新增 rap 手脚架安装 ([11e23a1](https://github.com/itsonglei/npm_common/commit/11e23a1))
 * 新增 travis 编译 git 项目 ([a3e1d12](https://github.com/itsonglei/npm_common/commit/a3e1d12))
 
 
