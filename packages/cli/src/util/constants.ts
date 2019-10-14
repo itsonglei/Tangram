@@ -113,10 +113,15 @@ export const enum INSTALL_TYPES {
   QQ = 'qq',
   RAP = 'rap',
   AOP = 'aop',
-  DAV = 'dav',
+  DVA = 'dva',
   TARO = 'taro',
   QAP = 'qap',
   FIE = 'fie'
+}
+
+export const enum INSTALL_CLI_TYPES {
+  RAP_CLI = 'rap-cli',
+  DVA_CLI = 'dva-cli',
 }
 
 export const enum BUILD_TYPES {
@@ -132,7 +137,7 @@ export const enum BUILD_TYPES {
   QQ = 'qq',
   RAP = 'rap',
   AOP = 'aop',
-  DAV = 'dav',
+  DVA = 'dva',
   TARO = 'taro',
   QAP = 'qap',
   FIE = 'fie'
@@ -147,7 +152,7 @@ export const enum TEMPLATE_TYPES {
   QQ = '.qml',
   RAP = '.js',
   AOP = '.js',
-  DAV = '.js',
+  DVA = '.js',
   TARO = '.js',
   QAP = '.js',
   FIE = '.js'
@@ -162,7 +167,7 @@ export const enum STYLE_TYPES {
   QQ = '.qss',
   RAP = '.js',
   AOP = '.js',
-  DAV = '.js',
+  DVA = '.js',
   TARO = '.js',
   QAP = '.js',
   FIE = '.js'
@@ -177,7 +182,7 @@ export const enum SCRIPT_TYPES {
   QQ = '.js',
   RAP = '.js',
   AOP = '.js',
-  DAV = '.js',
+  DVA = '.js',
   TARO = '.js',
   QAP = '.js',
   FIE = '.js'
@@ -192,7 +197,7 @@ export const enum CONFIG_TYPES {
   QQ = '.json',
   RAP = '.js',
   AOP = '.js',
-  DAV = '.js',
+  DVA = '.js',
   TARO = '.js',
   QAP = '.js',
   FIE = '.js'
@@ -257,11 +262,11 @@ export const MINI_APP_FILES: IMINI_APP_FILES = {
     SCRIPT: SCRIPT_TYPES.AOP,
     CONFIG: CONFIG_TYPES.AOP
   },
-  [BUILD_TYPES.DAV]: {
-    TEMPL: TEMPLATE_TYPES.DAV,
-    STYLE: STYLE_TYPES.DAV,
-    SCRIPT: SCRIPT_TYPES.DAV,
-    CONFIG: CONFIG_TYPES.DAV
+  [BUILD_TYPES.DVA]: {
+    TEMPL: TEMPLATE_TYPES.DVA,
+    STYLE: STYLE_TYPES.DVA,
+    SCRIPT: SCRIPT_TYPES.DVA,
+    CONFIG: CONFIG_TYPES.DVA
   },
   [BUILD_TYPES.TARO]: {
     TEMPL: TEMPLATE_TYPES.TARO,
@@ -352,7 +357,7 @@ export const CONFIG_MAP = {
   },
   [BUILD_TYPES.AOP]: {
   },
-  [BUILD_TYPES.DAV]: {
+  [BUILD_TYPES.DVA]: {
   },
   [BUILD_TYPES.TARO]: {
   },

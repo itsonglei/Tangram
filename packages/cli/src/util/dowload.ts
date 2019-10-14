@@ -58,7 +58,7 @@ export async function downloadGithubRepoLatestRelease (repoName: string, appPath
     }
     // https://github.com/rap-space/rap-cli/archive/1.2.4.tar.gz
     // https://github.com/rap-space/rap-cli/releases/download/1.2.4/rap.pkg
-    const downloadTemp = CONFIG.DOWNLOAD_NAME+`.${type}`
+    const downloadTemp = process.env.TANGRAM_ENV + CONFIG.DOWNLOAD_NAME+`.${type}`
     request({
       url: downloadUrl,
       headers: {
