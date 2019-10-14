@@ -7,6 +7,7 @@
 
 // import * as Util from './util'
 // import CONFIG from './config'
+// tsc -w
 import { INSTALL_TYPES } from './util/constants'
 import { IInstallConfig } from './util/types'
 
@@ -20,9 +21,10 @@ export default function install(appPath, installConfig: IInstallConfig) {
 		case INSTALL_TYPES.RAP:
 			installForRap(appPath, { });
 			break;
-	
-		default:
+		case INSTALL_TYPES.FIE:
+			installForFie(appPath, { });
 			break;
+		default:break;
 	}
 }
 
@@ -34,6 +36,16 @@ export default function install(appPath, installConfig: IInstallConfig) {
 function installForRap(appPath: string, installConfig: IInstallConfig) {
 	require('./install/rap').install(appPath, installConfig);
 }
+
+/**
+ * 下载 fie
+ * @param appPath 
+ * @param installConfig 
+ */
+function installForFie(appPath: string, installConfig: IInstallConfig) {
+	require('./install/fie').install(appPath, installConfig);
+}
+
 
 console.log();
 console.log("Install");
