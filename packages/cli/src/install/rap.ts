@@ -25,7 +25,7 @@ class Compiler {
 		this.isLinux = process.platform === 'linux'
 	}
 	// 初始化
-	async clean(){
+	clean(){
 		if (this.isMac) {
 			cleanNpm();
 		}
@@ -65,7 +65,7 @@ export async function install(appPath: string, installConfig: IInstallConfig){
 	process.env.TANGRAM_ENV = installConfig.type;
 	const compiler = new Compiler(appPath);
 	// 初始化
-	await compiler.clean();
+	compiler.clean();
 	// 下载到 .temp 文件中
 	await compiler.download(appPath);
 	// 编译 & 安装
