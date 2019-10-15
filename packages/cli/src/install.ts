@@ -21,11 +21,13 @@ export default function install(appPath, installConfig: IInstallConfig) {
 			installForRap(appPath, installConfig);
 			break;
 		case INSTALL_TYPES.DVA:
-			installForDva(appPath, installConfig);
+		case INSTALL_TYPES.FIE:
+		case INSTALL_TYPES.TARO:
+		case INSTALL_TYPES.AOP:
+		case INSTALL_TYPES.QAP:
+			installForNpmInstall(appPath, installConfig);
 			break;
-	
-		default:
-			break;
+		default:break;
 	}
 }
 
@@ -37,14 +39,16 @@ export default function install(appPath, installConfig: IInstallConfig) {
 function installForRap(appPath: string, installConfig: IInstallConfig) {
 	require('./install/rap').install(appPath, installConfig);
 }
+
 /**
- * 下载 dva
+ * 下载 dva/fie/qap/aop/taro
  * @param appPath 
  * @param installConfig 
  */
-function installForDva(appPath: string, installConfig: IInstallConfig) {
-	require('./install/dva').install(appPath, installConfig);
+function installForNpmInstall(appPath: string, installConfig: IInstallConfig) {
+	require('./install/npmInstall').install(appPath, installConfig);
 }
+
 
 console.log();
 console.log("Install");

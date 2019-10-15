@@ -1,9 +1,9 @@
 packages/*/package-lock.json
-packages/*/node_modules
+node_modules/
 packages/*/__tests__
 package-lock.json
 casperjs*
 .temp/
 packages/*/.temp
-packages/*/dist
+dist/
 packages/*/download*
