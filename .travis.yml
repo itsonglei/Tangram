@@ -2,7 +2,7 @@ language: node_js
 sudo: false
 branches:
   only:
-    - master  #只监测master分支提交测试
+    - master  #只监测master分支
 env:
   # - PACKAGE_VERSION="1.0.*"
 node_js:
