@@ -49,9 +49,13 @@ export function buildNpm(){
 		command = `sudo npm install ${pkgName} -g`;
 
 		console.log(chalk.yellow(command))
-
-		let result = execSync(command,{encoding:'utf8'});
-		console.log(result);
-		console.log(`${chalk.green('✔ ')} 手脚架已经准备好`)
+		try {
+			let result = execSync(command,{encoding:'utf8'});
+			console.log(result);
+			console.log(`${chalk.green('✔ ')} 手脚架已经准备好`)
+		} catch (error) {
+			console.error(error);
+			console.log(`${chalk.red('x ')} 手脚架下载失败`);
+		}
 	// });
 }

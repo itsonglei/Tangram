@@ -34,8 +34,14 @@ export function cleanNpm(){
 		let command
 		command = `sudo npm uninstall ${pkgName} -g`;
 		console.log(chalk.yellow(command))
-		let result = execSync(command,{encoding:'utf8'});
-		console.log(result);
-		console.log(`${chalk.green('✔ ')} 初始化完成`);
+		try {
+			let result = execSync(command,{encoding:'utf8'});
+			console.log(result);
+			console.log(`${chalk.green('✔ ')} 初始化完成`);
+		} catch (error) {
+			console.error(error);
+			console.log(`${chalk.red('x ')} 初始化失败`);
+		}
+		
 	// });
 }
