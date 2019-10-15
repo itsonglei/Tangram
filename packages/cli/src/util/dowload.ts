@@ -43,7 +43,7 @@ export function getGithubRepoLatestReleaseVersion (repoName: string) {
  */
 export async function downloadGithubRepoLatestRelease (repoName: string, appPath: string, dest: string, type: string) {
   const latestTagName = await getGithubRepoLatestReleaseVersion(repoName)
-  return new Promise((resolve, reject) => {
+  // return new Promise((resolve, reject) => {
     let downloadUrl = "";
     switch (type) {
       case "zip":
@@ -65,14 +65,14 @@ export async function downloadGithubRepoLatestRelease (repoName: string, appPath
         'User-Agent': 'Awesome-Octocat-App'
       }
     })
-    .on('error', reject)
+    .on('error', ()=>{})
     .on('complete', () => {
       const downloadTempPath = path.join(appPath, downloadTemp)
       if (fs.existsSync(downloadTempPath)) {
         fs.moveSync(downloadTempPath, path.join(dest, downloadTemp))
-        resolve()
+        // resolve()
       }
     })
     .pipe(fs.createWriteStream(downloadTemp))
-  })
+  // })
 }

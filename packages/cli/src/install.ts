@@ -7,7 +7,6 @@
 
 // import * as Util from './util'
 // import CONFIG from './config'
-// tsc -w
 import { INSTALL_TYPES } from './util/constants'
 import { IInstallConfig } from './util/types'
 
@@ -22,10 +21,11 @@ export default function install(appPath, installConfig: IInstallConfig) {
 			installForRap(appPath, installConfig);
 			break;
 		case INSTALL_TYPES.DVA:
-			installForDva(appPath, installConfig);
-			break;
 		case INSTALL_TYPES.FIE:
-			installForFie(appPath, { });
+		case INSTALL_TYPES.TARO:
+		case INSTALL_TYPES.AOP:
+		case INSTALL_TYPES.QAP:
+			installForNpmInstall(appPath, installConfig);
 			break;
 		default:break;
 	}
@@ -39,22 +39,22 @@ export default function install(appPath, installConfig: IInstallConfig) {
 function installForRap(appPath: string, installConfig: IInstallConfig) {
 	require('./install/rap').install(appPath, installConfig);
 }
-/**
- * 下载 dva
- * @param appPath 
- * @param installConfig 
- */
-function installForDva(appPath: string, installConfig: IInstallConfig) {
-	require('./install/dva').install(appPath, installConfig);
-}
+// /**
+//  * 下载 dva
+//  * @param appPath 
+//  * @param installConfig 
+//  */
+// function installForDva(appPath: string, installConfig: IInstallConfig) {
+// 	require('./install/dva').install(appPath, installConfig);
+// }
 
 /**
- * 下载 fie
+ * 下载 dva/fie
  * @param appPath 
  * @param installConfig 
  */
-function installForFie(appPath: string, installConfig: IInstallConfig) {
-	require('./install/fie').install(appPath, installConfig);
+function installForNpmInstall(appPath: string, installConfig: IInstallConfig) {
+	require('./install/npmInstall').install(appPath, installConfig);
 }
 
 

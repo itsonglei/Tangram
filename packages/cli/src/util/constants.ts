@@ -122,6 +122,10 @@ export const enum INSTALL_TYPES {
 export const enum INSTALL_CLI_TYPES {
   RAP_CLI = 'rap-cli',
   DVA_CLI = 'dva-cli',
+  AOP_CLI = 'aop-cli',
+  QAP_CLI = 'qap-cli',
+  TARO_CLI = '@tarojs/cli',
+  FIE_CLI = 'fie',
 }
 
 export const enum BUILD_TYPES {

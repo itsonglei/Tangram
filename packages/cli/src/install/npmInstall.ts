@@ -3,7 +3,9 @@ import { cleanNpm } from '../util/clean';
 import { buildNpm } from '../util/build';
 import { IInstallConfig } from '../util/types';
 import { PROJECT_CONFIG } from '../util/constants';
-
+/**
+ * npm install *** -g 的脚手架通用方法
+ */
 class Compiler {
 	project_config
 	isWindows: boolean
@@ -17,13 +19,23 @@ class Compiler {
 		this.isLinux = process.platform === 'linux'
 	}
 	// 初始化
-	async clean() {
+	// async clean() {
+	// 	if (this.isMac) {
+	// 		cleanNpm();
+	// 	}
+	// }
+	clean() {
 		if (this.isMac) {
 			cleanNpm();
 		}
 	}
 	// 编译 & 安装
-	async build(){
+	// async build(){
+	// 	if (this.isMac) {
+	// 		buildNpm();
+	// 	}
+	// }
+	build(){
 		if (this.isMac) {
 			buildNpm();
 		}
@@ -36,7 +48,9 @@ export async function install(appPath: string, installConfig:IInstallConfig){
 	process.env.TANGRAM_ENV = installConfig.type;
 	const compiler = new Compiler(appPath);
 	// 初始化
-	await compiler.clean();
+	// await compiler.clean();
+	compiler.clean();
 	// 编译 & 安装
-	await compiler.build();
+	// await compiler.build();
+	compiler.build();
 }
