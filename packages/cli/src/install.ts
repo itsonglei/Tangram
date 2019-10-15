@@ -39,17 +39,9 @@ export default function install(appPath, installConfig: IInstallConfig) {
 function installForRap(appPath: string, installConfig: IInstallConfig) {
 	require('./install/rap').install(appPath, installConfig);
 }
-// /**
-//  * 下载 dva
-//  * @param appPath 
-//  * @param installConfig 
-//  */
-// function installForDva(appPath: string, installConfig: IInstallConfig) {
-// 	require('./install/dva').install(appPath, installConfig);
-// }
 
 /**
- * 下载 dva/fie
+ * 下载 dva/fie/qap/aop/taro
  * @param appPath 
  * @param installConfig 
  */
